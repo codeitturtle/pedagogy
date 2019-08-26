@@ -1,0 +1,30 @@
+#active{
+    background-color: #008B8B;
+    width: 75px;
+}
+.box{
+    width: 80%;
+    height: 140px;
+    background-color:#F0F0F0;
+}
+.box1{
+    width: 80%;
+    height: auto;
+    background-color:#F0F0F0;
+}
+
+.box2{
+    width: 200px;
+    height: 150px;
+    margin: 0 auto;
+}
+hr{
+    width: 80%;
+    float: left;
+}
+body{
+    background-color:#F8F8F8;
+}
+.clear{
+    clear: both;
+}
