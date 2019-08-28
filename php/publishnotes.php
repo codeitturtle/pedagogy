@@ -5,9 +5,9 @@
         $file_type = $_FILES['file']['type'];
         $file_size = $_FILES['file']['size'];
         $error = $_FILES['file']['error'];
+    
         if($error == 0){
-            if($file_size > 0){
-                if($file_type == "application/pdf"){
+            
                     $subjectcode = $_POST['txtCode'];
                     $faculty = $_POST['txtFaculty'];
                     $semester = $_POST['txtSemester'];
@@ -25,15 +25,9 @@
                         header('Refresh:3;../teacher/home.html');
                     }else{
                         echo ("error:" . mysqli_error());
-                        header('Refresh:3;../teacher/publishNotes.php');
+                        //header('Refresh:3;../teacher/publishNotes.php');
                     }
-                }else{
-                    echo "invalid type";
-                }
-            }
-        }else{
-            echo "Error found";
-        }
+      
     }else{
         echo "Your error message";
     }
