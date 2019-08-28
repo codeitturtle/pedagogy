@@ -57,7 +57,7 @@
     </ul>
   </div>
 </nav>
- <form action="/action_page.php">
+ <form action="../php/publishnotes.php" method="post" enctype="multipart/form-data">
     <div class="form-group">
       <label for="subjectcode">Subjectcode:</label>
       <input type="text" name="txtCode" class="form-control" id="subl" placeholder="Enter subject" >
@@ -82,7 +82,7 @@
     
     <div class="form-group">
     <label for="file">File:</label>
-    <input type="file" name="txtNotes" class="form-control-file" id="file" placeholder="upload">
+    <input type="file" name="file" class="form-control-file" id="file" placeholder="upload">
   </div>
   <div class="form-group">
     <label for="teacher">Teacher:</label>
