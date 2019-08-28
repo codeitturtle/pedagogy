@@ -33,7 +33,7 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="#">Notices</a>
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="home.html">Home</a></li>
@@ -52,23 +52,15 @@
           
         </ul>
       </li>
+       <li><a href="#">Events</a></li>
       
     </ul>
   </div>
 </nav>
  <form action="/action_page.php">
     <div class="form-group">
-      <label for="subject">Subject:</label>
-      <input type="text" name="txtSubject" class="form-control" id="subl" placeholder="Enter subject" name="txtSubject">
-    </div>
-    <div class="form-group">
-      <label for="semester">Semester:</label>
-      <select name="txtYear" id="" class="form-control">
-            <option value="first">First</option>
-            <option value="second">Second</option>
-            <option value="third">Third</option>
-             <option value="third">Fourth</option>
-          </select>
+      <label for="subjectcode">Subjectcode:</label>
+      <input type="text" name="txtCode" class="form-control" id="subl" placeholder="Enter subject" >
     </div>
      <div class="form-group">
      <label for="faculties">faculties</label>
@@ -79,8 +71,22 @@
          </select>
     </div>
     <div class="form-group">
+      <label for="Semester">Semester:</label>
+      <select name="txtSemester" id="" class="form-control">
+            <option value="first">First</option>
+            <option value="second">Second</option>
+            <option value="third">Third</option>
+             <option value="fourth">Fourth</option>
+          </select>
+    </div>
+    
+    <div class="form-group">
     <label for="file">File:</label>
-    <input type="file" name="txtFile" class="form-control-file" id="file" placeholder="upload">
+    <input type="file" name="txtNotes" class="form-control-file" id="file" placeholder="upload">
+  </div>
+  <div class="form-group">
+    <label for="teacher">Teacher:</label>
+    <input type="text" name="txtTeacher" class="form-control-file" id="teach" placeholder="teacher name">
   </div>
   <button type="submit"  name="btnSubmit" class="btn btn-transparents btn-lg" style="color: black; margin-bottom: 10px;">Submit</button>
   </form>

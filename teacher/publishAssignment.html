@@ -15,8 +15,8 @@
            margin-left: 500px;
            padding: 10px;
            width: 400px;
-           max-height: 400px;
-           margin-top: 120px;
+           max-height: 500px;
+           margin-top: 100px;
            background-color: white;
            border-style:solid 1px white;
        }
@@ -37,7 +37,7 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="#">Notices</a>
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="home.html">Home</a></li>
@@ -56,27 +56,27 @@
           
         </ul>
       </li>
+      <li class=""><a href="#">Events</a></li>
       
     </ul>
   </div>
 </nav>
   
     <form action="/action_page.php">
+    <div class="form-group">
+      <label for="subjectCode">SubjectCode:</label>
+      <input type="text" class="form-control" id="subl" placeholder="Enter subject" name="txtCode">
+    </div>
+    <div class="form-group">
+      <label for="Date">Date:</label>
+      <input type="date" class="form-control" id="date" placeholder="Enter date" name="txtDate">
+    </div>
    
     <div class="form-group">
-      <label for="subject">Subject:</label>
-      <input type="text" class="form-control" id="subl" placeholder="Enter subject" name="txtSubject">
+      <label for="Deadline">Deadline:</label>
+      <input type="date" class="form-control" id="deadline" placeholder="Enter deadline for submisssion" name="txtDeadline">
     </div>
-    <div class="form-group">
-      <label for="Semester">Semester:</label>
-      <select name="txtSemester" id="" class="form-control">
-            <option value="first">First</option>
-            <option value="second">Second</option>
-            <option value="third">Third</option>
-             <option value="third">Fourth</option>
-          
-    </select>
-    </div>
+    
      <div class="form-group">
      <label for="faculties">faculties</label>
         <select name="txtFaculty" id="" class="form-control">
@@ -87,8 +87,18 @@
          </select>
     </div>
     <div class="form-group">
+     <label for="semester">Semester</label>
+        <select name="txtSemester" id="" class="form-control">
+            <option value="first">first</option>
+            <option value="second">second</option>
+            <option value="third">third</option>
+          
+         </select>
+    </div>
+    
+    <div class="form-group">
     <label for="file">File:</label>
-    <input type="file"  name="txtFile" class="form-control-file" id="file" placeholder="upload">
+    <input type="file" name="txtAssignment" class="form-control-file" id="file" placeholder="upload">
   </div>
   <button type="submit" class="btn btn-transparents btn-lg" style="color: black; margin-bottom: 10px;">Submit</button>
   
