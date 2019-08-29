@@ -79,9 +79,17 @@
      <div class="form-group">
      <label for="faculties">Faculty</label>
         <select name="txtFaculty" id="" class="form-control">
-            <option value="Science">Bsc Csit</option>
-            <option value="Commerce">BBA</option>
-            <option value="Arts">BA</option>
+            <?php
+                include "../php/connect.php";
+                $query = "SELECT * FROM faculty";
+                $result = mysqli_query($con,$query);
+                while($record =mysqli_fetch_assoc($result)){
+                    $faculty =$record['Faculty'];
+                    ?>
+                    <option value="<?php echo $faculty ?>"> <?php echo $faculty ?></option>
+                    <?php
+                }
+            ?>
           
          </select>
     </div>

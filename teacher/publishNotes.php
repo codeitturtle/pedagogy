@@ -61,13 +61,32 @@
       <input type="text" name="txtCode" class="form-control" id="subl" placeholder="Enter subject" >
     </div>
      <div class="form-group">
-    <label for="faculty">Faculty:</label>
-    <input type="text" name="txtFaculty" class="form-control-file" id="teach" placeholder="faculty name">
-  </div>
+     <label for="faculties">Faculty</label>
+        <select name="txtFaculty" id="" class="form-control">
+           <?php
+                include "../php/connect.php";
+                $query = "SELECT * FROM faculty";
+                $result = mysqli_query($con,$query);
+                while($record =mysqli_fetch_assoc($result)){
+                    $faculty =$record['Faculty'];
+                    ?>
+                    <option value="<?php echo $faculty ?>"> <?php echo $faculty ?></option>
+                    <?php
+                }
+            ?>
+          
+         </select>
+    </div>
     <div class="form-group">
-    <label for="semester">Semester:</label>
-    <input type="text" name="txtSemester" class="form-control-file" id="teach" placeholder="Semester">
-  </div>
+     <label for="faculties">Semester:</label>
+        <select name="txtSemester" id="" class="form-control">
+            <option value="First">First</option>
+            <option value="Second">Second</option>
+            <option value="Third">Third</option>
+            <option value="Fourth">Fourth</option>
+          
+         </select>
+    </div>
     
     <div class="form-group">
     <label for="file">File:</label>
