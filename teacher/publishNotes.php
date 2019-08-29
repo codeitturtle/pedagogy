@@ -61,22 +61,13 @@
       <input type="text" name="txtCode" class="form-control" id="subl" placeholder="Enter subject" >
     </div>
      <div class="form-group">
-     <label for="faculties">faculties</label>
-        <select name="txtFaculty" id="" class="form-control">
-            <option value="Science">Bsc Csit</option>
-            <option value="Commerce">BBA</option>
-            <option value="Arts">BA</option>
-         </select>
-    </div>
+    <label for="faculty">Faculty:</label>
+    <input type="text" name="txtFaculty" class="form-control-file" id="teach" placeholder="faculty name">
+  </div>
     <div class="form-group">
-      <label for="Semester">Semester:</label>
-      <select name="txtSemester" id="" class="form-control">
-            <option value="first">First</option>
-            <option value="second">Second</option>
-            <option value="third">Third</option>
-             <option value="fourth">Fourth</option>
-          </select>
-    </div>
+    <label for="semester">Semester:</label>
+    <input type="text" name="txtSemester" class="form-control-file" id="teach" placeholder="Semester">
+  </div>
     
     <div class="form-group">
     <label for="file">File:</label>

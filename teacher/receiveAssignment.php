@@ -61,23 +61,28 @@
     </thead>
     <tbody>
    <?php
-     include "connect.php";
-     $query = "SELECT * FROM assignment";
+        
+     include "../php/connect.php";
+     $query = "SELECT * FROM assignmentreceive";
      $result = mysqli_query($con,$query);
-     while(mysql_fetch_assoc($result)){
-     $id=$record['Id'];
-     $date=$record['Date'];
-     $subjectcode=$record['SubjectCode'];
-     $faculty=$record['Faculty'];
-     $student=$record['Student'];
-     $assignment=$record['Assignment'];
-         echo "<tr scope='row'>";
-         echo "<td>$id</td>";
-          echo "<td>$date</td>";
-          echo "<td>$subjectcode</td>";
-          echo "<td>$faculty</td>";
-          echo "<td>$student</td>";
-          echo "<td>$assignment</td>";
+     if(mysqli_num_rows($result) >0){
+         while($record=mysqli_fetch_assoc($result)){
+             $id=$record['Id'];
+             $date=$record['Date'];
+             $subjectcode=$record['SubjectCode'];
+             $faculty=$record['Faculty'];
+             $student=$record['Student'];
+             $assignment=$record['Assignment'];
+             echo "<tr scope='row'>";
+             echo "<td>$id</td>";
+              echo "<td>$date</td>";
+              echo "<td>$subjectcode</td>";
+              echo "<td>$faculty</td>";
+              echo "<td>$student</td>";
+             echo "<td><a href='#'>Download</a></td>";
+             echo "</tr>";
+         }
+     
          
      }
 

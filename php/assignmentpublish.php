@@ -25,7 +25,7 @@
                         header('Refresh:5;../teacher/home.php');
                     }else{
                         echo("error:" . mysqli_error());
-                        header('Refresh:4;../teacher/publishassignment.html');
+                        header('Refresh:4;../teacher/publishassignment.php');
                     }
                     
                     
