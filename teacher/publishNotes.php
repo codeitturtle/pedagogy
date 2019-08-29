@@ -36,7 +36,7 @@
       <a class="navbar-brand" href="#">Notices</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="home.html">Home</a></li>
+      <li class="active"><a href="home.php">Home</a></li>
       <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Assignment<span class="caret"></span></a>
         <ul class="dropdown-menu">
