@@ -79,11 +79,11 @@
               echo "<td>$subjectcode</td>";
               echo "<td>$faculty</td>";
               echo "<td>$student</td>";
-             echo "<td><a href='../assignment/$assignment'>Download</a></td>";
+             echo "<td><a href='../assignmentreceive/$assignment'>Download</a></td>";
              echo "</tr>";
          }
      
-         
+        
      }
 
         
