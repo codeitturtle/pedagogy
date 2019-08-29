@@ -1,38 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-   <style>
-       body{
-        background-image: linear-gradient(to left,rgba(100,40,150,0.6),rgba(140,100,90,0.3));
-       }
-       form{
-           justify-content: center;
-           margin-left: 500px;
-           padding: 10px;
-           width: 450px;
-           max-height: 630px;
-           background-color: white;
-           border-style:solid 1px white;
-       }
-       
-    footer {
-      background-color: #555;
-      color: white;
-      padding: 15px;
-        margin-top:35px;
-        background-color: transparent;
-    }
-    
-       
+  <style>
+      body{
+          background-image: linear-gradient(to right,rgba(0,100,230,0.5),rgba(0,180,0,0.3));
+      }
+    th{
+        text-align: center;
+      }
+     
+     
     </style>
-    </head>
-  <body>
-  
+</head>
+<body>
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -52,79 +38,74 @@
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Notes<span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="publishNotes.php">Publish</a></li>
-          
-        </ul>
+           </ul>
       </li>
       <li class=""><a href="#">Events</a></li>
-      
-    </ul>
+     </ul>
   </div>
 </nav>
-  
-    <form action="../php/assignmentpublish.php" method="post" enctype="multipart/form-data">
-    <div class="form-group">
-      <label for="subjectCode">SubjectCode:</label>
-      <input type="text" class="form-control" id="subl" placeholder="Enter subject" name="txtCode">
-    </div>
-    <div class="form-group">
-      <label for="Date">Date:</label>
-      <input type="date" class="form-control" id="date" placeholder="Enter date" name="txtDate">
-    </div>
-   
-    <div class="form-group">
-      <label for="Deadline">Deadline:</label>
-      <input type="date" class="form-control" id="deadline" placeholder="Enter deadline for submisssion" name="txtDeadline">
-    </div>
-    
-     <div class="form-group">
-     <label for="faculties">Faculty</label>
-        <select name="txtFaculty" id="" class="form-control">
-            <?php
-                include "../php/connect.php";
-                $query = "SELECT * FROM faculty";
-                $result = mysqli_query($con,$query);
-                while($record =mysqli_fetch_assoc($result)){
-                    $faculty =$record['Faculty'];
-                    ?>
-                    <option value="<?php echo $faculty ?>"> <?php echo $faculty ?></option>
-                    <?php
-                }
-            ?>
-          
-         </select>
-    </div>
-    <div class="form-group">
-     <label for="semester">Semester</label>
-        <select name="txtSemester" id="" class="form-control">
-            <option value="first">first</option>
-            <option value="second">second</option>
-            <option value="third">third</option>
-          
-         </select>
-    </div>
-    <div class="form-group">
-      <label for="teacher">Teacher:</label>
-      <input type="text" class="form-control" id="subl" placeholder="Enter subject" name="txtTeacher">
-    </div>
-    <div class="form-group">
-        <label for="file">Remarks:</label>
-        <input style="width: 70%;height: 40px" type="text" name="txtRemarks" class="form-control-file" id="file">
-   </div>
-    <div class="form-group">
-    <label for="file">File:</label>
-    <input type="file" name="file" class="form-control-file" id="file" placeholder="upload">
-  </div>
-  <button type="submit" name="btnSubmit" class="btn btn-transparents btn-lg" style="color: black; margin-bottom: 10px;">Submit</button>
-  
- 
-   </form>
+<div class="container text-center">
+  <h2>Assignment table</h2>
+  <p>The table showing assignment of students.</p>            
+  <table class="table table-hover ">
+    <thead>
+      <tr>
+         <th scope="col">ID</th>
+         <th scope="col">Date</th>
+         <th scope="col">Deadline</th>
+         <th scope="col">SubjectCode</th>
+         <th scope="col">Faculty</th>
+         <th scope="col">Semester</th>
+         <th scope="col">Assignment</th>
+         <th scope="col">Remarks</th>
+         <th scope="col">Teacher</th>
+
+      </tr>
+    </thead>
+    <tbody>
+   <?php
+        
+     include "../php/connect.php";
+     $query = "SELECT * FROM assignmentpublish";
+     $result = mysqli_query($con,$query);
+     if(mysqli_num_rows($result) >0){
+         while($record=mysqli_fetch_assoc($result)){
+             $id=$record['Id'];
+             $date=$record['Date'];
+             $deadline=$record['Deadline'];
+             $subjectcode=$record['SubjectCode'];
+             $faculty=$record['Faculty'];
+             $semester=$record['Semester'];
+             $assignment=$record['Assignment'];
+             $remarks=$record['Remarks'];
+             $teacher=$record['Teacher'];
+             echo "<tr scope='row'>";
+             echo "<td>$id</td>";
+              echo "<td>$date</td>";
+              echo "<td>$deadline</td>";
+              echo "<td>$subjectcode</td>";
+              echo "<td>$faculty</td>";
+              echo "<td>$semester</td>";
+             echo "<td><a href='../assignmentreceive/$assignment'>Download</a></td>";
+             echo "<td>$remarks</td>";
+             echo "<td>$teacher</td>";
+             echo "</tr>";
+         }
      
-     
-<footer class="container-fluid text-center" style=" height:50px;">
+        
+     }
+
+        
+           
+        ?>
+    </tbody>
+  </table>
+
+<footer class="container-fluid text-center" style="color: black; margin-top: 100px;">
   <p>copyright@Pedagogy 2019</p>
 </footer>
  
-   
-     
+    </div>
+
 </body>
 </html>
