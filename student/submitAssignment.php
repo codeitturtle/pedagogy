@@ -39,19 +39,19 @@
       <a class="navbar-brand" href="#">Notices</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="home.html">Home</a></li>
+      <li class="active"><a href="home.php">Home</a></li>
       <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Assignment<span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="publishAssignment.html">Publish</a></li>
-          <li><a href="receiveAssignment.html">Receive</a></li>
+          <li><a href="publishAssignment.php">Publish</a></li>
+          <li><a href="receiveAssignment.php">Receive</a></li>
           
         </ul>
       </li>
        <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Notes<span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="publishNotes.html">Publish</a></li>
+          <li><a href="publishNotes.php">Publish</a></li>
           
         </ul>
       </li>
@@ -61,52 +61,44 @@
   </div>
 </nav>
   
-    <form action="/action_page.php">
-    <div class="form-group">
-      <label for="subjectCode">SubjectCode:</label>
-      <input type="text" class="form-control" id="subl" placeholder="Enter subject" name="txtCode">
-    </div>
-    <div class="form-group">
-      <label for="subjectCode">Faculty:</label>
-      <input type="text" class="form-control" id="subl" placeholder="Enter subject" name="txtFaculty">
-    </div>
+    <form action="../php/studentsubmit.php" method="post" enctype="multipart/form-data">
+    
     <div class="form-group">
       <label for="Date">Date:</label>
       <input type="date" class="form-control" id="date" placeholder="Enter date" name="txtDate">
     </div>
-   
     <div class="form-group">
-      <label for="Deadline">Deadline:</label>
-      <input type="date" class="form-control" id="deadline" placeholder="Enter deadline for submisssion" name="txtDeadline">
+      <label for="subjectCode">SubjectCode:</label>
+      <input type="text" class="form-control" id="subl" placeholder="Enter subject" name="txtCode">
     </div>
     
      <div class="form-group">
-     <label for="faculties">faculties</label>
+     <label for="faculties">Faculty</label>
         <select name="txtFaculty" id="" class="form-control">
-            <option value="Science">Bsc Csit</option>
-            <option value="Commerce">BBA</option>
-            <option value="Arts">BA</option>
+            <?php
+                include "../php/connect.php";
+                $query = "SELECT * FROM faculty";
+                $result = mysqli_query($con,$query);
+                while($record =mysqli_fetch_assoc($result)){
+                    $faculty =$record['Faculty'];
+                    ?>
+                    <option value="<?php echo $faculty ?>"> <?php echo $faculty ?></option>
+                    <?php
+                }
+            ?>
           
          </select>
     </div>
     <div class="form-group">
-     <label for="semester">Semester</label>
-        <select name="txtSemester" id="" class="form-control">
-            <option value="first">first</option>
-            <option value="second">second</option>
-            <option value="third">third</option>
-          
-         </select>
+      <label for="student">Student:</label>
+      <input type="text" class="form-control" id="subl" placeholder="Enter student username" name="txtStudent">
     </div>
-    <div class="form-group">
-        <label for="file">Remarks:</label>
-        <input style="width: 70%;height: 40px" type="text" name="txtRemarks" class="form-control-file" id="file">
-   </div>
+    
     <div class="form-group">
     <label for="file">File:</label>
-    <input type="file" name="txtAssignment" class="form-control-file" id="file" placeholder="upload">
+    <input type="file" name="file" class="form-control-file" id="file" placeholder="upload">
   </div>
-  <button type="submit" class="btn btn-transparents btn-lg" style="color: black; margin-bottom: 10px;">Submit</button>
+  <button type="submit" name="btnSubmit" class="btn btn-transparents btn-lg" style="color: black; margin-bottom: 10px;">Submit</button>
   
  
    </form>

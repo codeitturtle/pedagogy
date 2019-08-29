@@ -8,18 +8,18 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
    <style>
        body{
-        background-image: repeating-linear-gradient(to right,rgba(250,240,35,0.4),rgba(130,180,200,0.6));
+        background-image: linear-gradient(to left,rgba(100,40,150,0.6),rgba(140,100,90,0.3));
        }
-   form{
+       form{
            justify-content: center;
            margin-left: 500px;
            padding: 10px;
-           width: 400px;
-           max-height: 400px;
-           margin-top: 120px;
+           width: 450px;
+           max-height: 630px;
            background-color: white;
            border-style:solid 1px white;
        }
+       
     footer {
       background-color: #555;
       color: white;
@@ -27,9 +27,12 @@
         margin-top:35px;
         background-color: transparent;
     }
+    
+       
     </style>
     </head>
   <body>
+  
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -42,28 +45,41 @@
         <ul class="dropdown-menu">
           <li><a href="publishAssignment.php">Publish</a></li>
           <li><a href="receiveAssignment.php">Receive</a></li>
-      </ul>
+          
+        </ul>
       </li>
        <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Notes<span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="publishNotes.php">Publish</a></li>
-         </ul>
+          
+        </ul>
       </li>
-       <li><a href="#">Events</a></li>
+      <li class=""><a href="#">Events</a></li>
       
     </ul>
   </div>
 </nav>
- <form action="../php/publishnotes.php" method="post" enctype="multipart/form-data">
+  
+    <form action="../php/assignmentpublish.php" method="post" enctype="multipart/form-data">
     <div class="form-group">
-      <label for="subjectcode">Subjectcode:</label>
-      <input type="text" name="txtCode" class="form-control" id="subl" placeholder="Enter subject" >
+      <label for="subjectCode">SubjectCode:</label>
+      <input type="text" class="form-control" id="subl" placeholder="Enter subject" name="txtCode">
     </div>
+    <div class="form-group">
+      <label for="Date">Date:</label>
+      <input type="date" class="form-control" id="date" placeholder="Enter date" name="txtDate">
+    </div>
+   
+    <div class="form-group">
+      <label for="Deadline">Deadline:</label>
+      <input type="date" class="form-control" id="deadline" placeholder="Enter deadline for submisssion" name="txtDeadline">
+    </div>
+    
      <div class="form-group">
      <label for="faculties">Faculty</label>
         <select name="txtFaculty" id="" class="form-control">
-           <?php
+            <?php
                 include "../php/connect.php";
                 $query = "SELECT * FROM faculty";
                 $result = mysqli_query($con,$query);
@@ -78,28 +94,37 @@
          </select>
     </div>
     <div class="form-group">
-     <label for="faculties">Semester:</label>
+     <label for="semester">Semester</label>
         <select name="txtSemester" id="" class="form-control">
-            <option value="First">First</option>
-            <option value="Second">Second</option>
-            <option value="Third">Third</option>
-            <option value="Fourth">Fourth</option>
+            <option value="first">first</option>
+            <option value="second">second</option>
+            <option value="third">third</option>
           
          </select>
     </div>
-    
+    <div class="form-group">
+      <label for="teacher">Teacher:</label>
+      <input type="text" class="form-control" id="subl" placeholder="Enter subject" name="txtTeacher">
+    </div>
+    <div class="form-group">
+        <label for="file">Remarks:</label>
+        <input style="width: 70%;height: 40px" type="text" name="txtRemarks" class="form-control-file" id="file">
+   </div>
     <div class="form-group">
     <label for="file">File:</label>
     <input type="file" name="file" class="form-control-file" id="file" placeholder="upload">
   </div>
-  <div class="form-group">
-    <label for="teacher">Teacher:</label>
-    <input type="text" name="txtTeacher" class="form-control-file" id="teach" placeholder="teacher name">
-  </div>
-  <button type="submit"  name="btnSubmit" class="btn btn-transparents btn-lg" style="color: black; margin-bottom: 10px;">Submit</button>
-  </form>
-<footer class="container-fluid text-center" style=" height:50px; color: black;">
+  <button type="submit" name="btnSubmit" class="btn btn-transparents btn-lg" style="color: black; margin-bottom: 10px;">Submit</button>
+  
+ 
+   </form>
+     
+     
+<footer class="container-fluid text-center" style=" height:50px;">
   <p>copyright@Pedagogy 2019</p>
 </footer>
- </body>
+ 
+   
+     
+</body>
 </html>

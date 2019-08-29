@@ -2,11 +2,8 @@
     if (isset($_POST['btnSubmit'])) {
         $subjectcode = $_POST['txtCode'];
         $date = $_POST['txtDate'];
-        $deadline = $_POST['txtDeadline'];
         $faculty =$_POST['txtFaculty'];
-        $semester =$_POST['txtSemester'];
-        $remarks = $_POST['txtRemarks'];
-        $teacher = $_POST['txtTeacher'];
+        $student = $_POST['txtStudent'];
         $file_name = $_FILES['file']['name'];
         $file_type = $_FILES['file']['type'];
         $temp_name = $_FILES['file']['tmp_name'];
@@ -18,15 +15,15 @@
                 if($file_type == "application/pdf"){
                     include "connect.php";
                     
-                    $insert = "INSERT INTO assignmentpublish (Date,Deadline,SubjectCode,Faculty,Semester,Assignment,Remarks,Teacher) VALUES ('$date','$deadline','$subjectcode','$faculty','$semester','$file_name','$remarks','$teacher')";
+                    $insert = "INSERT INTO assignmentreceive (Date,SubjectCode,Faculty,Student,Assignment) VALUES ('$date','$subjectcode','$faculty','$student','$file_name')";
                     
                     if(mysqli_query($con,$insert)){
-                        move_uploaded_file($temp_name,"../assignment/$file_name");
+                        move_uploaded_file($temp_name,"../assignmentreceive/$file_name");
                         echo "file uploaded";
-                        header('Refresh:5;../teacher/home.php');
+                        header('Refresh:5;../student/studenthome.php');
                     }else{
                         echo("error:" . mysqli_error());
-                        header('Refresh:4;../teacher/publishassignment.php');
+                        header('Refresh:4;../student/submitAssignment.php');
                     }
                     
                     
