@@ -18,7 +18,7 @@
                     $insert = "INSERT INTO assignmentreceive (Date,SubjectCode,Faculty,Student,Assignment) VALUES ('$date','$subjectcode','$faculty','$student','$file_name')";
                     
                     if(mysqli_query($con,$insert)){
-                        move_uploaded_file($temp_name,"../assignmentreceive/$file_name");
+                        move_uploaded_file($temp_name,"../upload/assignmentreceive/$file_name");
                         echo "file uploaded";
                         header('Refresh:5;../student/studenthome.php');
                     }else{
