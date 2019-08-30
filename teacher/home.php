@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>My first Project</title>
+  <title>Teacher Homepage</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -53,13 +53,13 @@
       <a class="navbar-brand" href="#">Notice</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="home.html">Home</a></li>
+      <li class="active"><a href="home.php">Home</a></li>
       
       <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Assignment<span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="publishAssignment.html">Publish</a></li>
-          <li><a href="receiveAssignment.html">Receive</a></li>
+          <li><a href="publishAssignment.php">Publish</a></li>
+          <li><a href="receiveAssignment.php">Receive</a></li>
           
         </ul>
       </li>

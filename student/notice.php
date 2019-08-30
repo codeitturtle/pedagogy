@@ -71,7 +71,7 @@
     <link rel="stylesheet" href="assets/css/Team-Grid.css">
     <link rel="stylesheet" href="assets/css/title-bullets.css">
     <link rel="stylesheet" href="assets/css/vertical-tabs-with-links-and-contents.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body class="text-primary"> 

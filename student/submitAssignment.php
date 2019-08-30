@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Assignment Submit</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
@@ -14,9 +14,8 @@
            justify-content: center;
            margin-left: 500px;
            padding: 10px;
-           width: 400px;
-           max-height: 500px;
-           margin-top: 100px;
+           width: 450px;
+           max-height: 630px;
            background-color: white;
            border-style:solid 1px white;
        }
@@ -40,19 +39,19 @@
       <a class="navbar-brand" href="#">Notices</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="home.html">Home</a></li>
-      <li class="dropdown">
+      <li><a href="studenthome.php">Home</a></li>
+      <li class="dropdowna active">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Assignment<span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="publishAssignment.html">Publish</a></li>
-          <li><a href="receiveAssignment.html">Receive</a></li>
+          <li><a href="submitAssignment.php">Submit</a></li>
+          <li><a href="receiveAssignment.php">Receive</a></li>
           
         </ul>
       </li>
        <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Notes<span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="publishNotes.html">Publish</a></li>
+          <li><a href="receivenotes.php">Publish</a></li>
           
         </ul>
       </li>
@@ -62,45 +61,44 @@
   </div>
 </nav>
   
-    <form action="/action_page.php">
-    <div class="form-group">
-      <label for="subjectCode">SubjectCode:</label>
-      <input type="text" class="form-control" id="subl" placeholder="Enter subject" name="txtCode">
-    </div>
+    <form action="../php/studentsubmit.php" method="post" enctype="multipart/form-data">
+    
     <div class="form-group">
       <label for="Date">Date:</label>
       <input type="date" class="form-control" id="date" placeholder="Enter date" name="txtDate">
     </div>
-   
     <div class="form-group">
-      <label for="Deadline">Deadline:</label>
-      <input type="date" class="form-control" id="deadline" placeholder="Enter deadline for submisssion" name="txtDeadline">
+      <label for="subjectCode">SubjectCode:</label>
+      <input type="text" class="form-control" id="subl" placeholder="Enter subject" name="txtCode">
     </div>
     
      <div class="form-group">
-     <label for="faculties">faculties</label>
+     <label for="faculties">Faculty</label>
         <select name="txtFaculty" id="" class="form-control">
-            <option value="Science">Bsc Csit</option>
-            <option value="Commerce">BBA</option>
-            <option value="Arts">BA</option>
+            <?php
+                include "../php/connect.php";
+                $query = "SELECT * FROM faculty";
+                $result = mysqli_query($con,$query);
+                while($record =mysqli_fetch_assoc($result)){
+                    $faculty =$record['Faculty'];
+                    ?>
+                    <option value="<?php echo $faculty ?>"> <?php echo $faculty ?></option>
+                    <?php
+                }
+            ?>
           
          </select>
     </div>
     <div class="form-group">
-     <label for="semester">Semester</label>
-        <select name="txtSemester" id="" class="form-control">
-            <option value="first">first</option>
-            <option value="second">second</option>
-            <option value="third">third</option>
-          
-         </select>
+      <label for="student">Student:</label>
+      <input type="text" class="form-control" id="subl" placeholder="Enter student username" name="txtStudent">
     </div>
     
     <div class="form-group">
     <label for="file">File:</label>
-    <input type="file" name="txtAssignment" class="form-control-file" id="file" placeholder="upload">
+    <input type="file" name="file" class="form-control-file" id="file" placeholder="upload">
   </div>
-  <button type="submit" class="btn btn-transparents btn-lg" style="color: black; margin-bottom: 10px;">Submit</button>
+  <button type="submit" name="btnSubmit" class="btn btn-transparents btn-lg" style="color: black; margin-bottom: 10px;">Submit</button>
   
  
    </form>
