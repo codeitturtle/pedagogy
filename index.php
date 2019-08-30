@@ -22,8 +22,8 @@
             </div>
             <div class="navbar">
                 <ul>
-                    <li><a  style="float: right; "href="#">Login</a></li>
-                    <li><a href="#">Register</a></li>
+                    <li><a  style="float: right; "href="login.php">Login</a></li>
+                    <li><a href="register.php">Register</a></li>
                     <li><a href="#">Home</a></li>
                 </ul>
             </div>
