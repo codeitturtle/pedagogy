@@ -19,7 +19,7 @@
                     $insert = "INSERT INTO notes (SubjectCode,Faculty,Semester,Notes,Teacher) VALUES('$subjectcode','$faculty','$semester','$file_name','$teacher')";
                     
                     if(mysqli_query($con,$insert)){
-                        move_uploaded_file($temp_name,"../upload/$file_name");
+                        move_uploaded_file($temp_name,"../notesTech/$file_name");
                         echo"file uploaded";
                         header('Refresh:6;../teacher/home.php');
                             
