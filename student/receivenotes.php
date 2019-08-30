@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Notes Page</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -45,12 +45,12 @@
   </div>
 </nav>
 <div class="container text-center">
-  <h2>Assignment table</h2>
-  <p>The table showing assignment of students.</p>            
+  <h2>Notes table</h2>
+  <p>The table showing notes of students.</p>            
   <table class="table table-hover ">
     <thead>
       <tr>
-         <th scope="col">#</th>
+         <th scope="col">ID</th>
          <th scope="col">SubjectCode</th>
          <th scope="col">Faculty</th>
          <th scope="col">Semester</th>
@@ -67,7 +67,7 @@
      $result = mysqli_query($con,$query);
      if(mysqli_num_rows($result) >0){
          while($record=mysqli_fetch_assoc($result)){
-             $id=$record['id'];
+             $id=$record['Id'];
              $subjectcode=$record['SubjectCode'];
              $faculty=$record['Faculty'];
              $semester=$record['Semester'];
