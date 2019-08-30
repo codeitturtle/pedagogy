@@ -78,7 +78,7 @@
               echo "<td>$subjectcode</td>";
               echo "<td>$faculty</td>";
               echo "<td>$semester</td>";
-             echo "<td><a href='../notesTech/$note'>Download</a></td>";
+             echo "<td><a href='../upload/notesTech/$note'>Download</a></td>";
              echo "<td>$teacher</td>";
              echo "</tr>";
          }

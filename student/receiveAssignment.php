@@ -86,7 +86,7 @@
               echo "<td>$subjectcode</td>";
               echo "<td>$faculty</td>";
               echo "<td>$semester</td>";
-             echo "<td><a href='../assignmentreceive/$assignment'>Download</a></td>";
+             echo "<td><a href='../upload/assignmentreceive/$assignment'>Download</a></td>";
              echo "<td>$remarks</td>";
              echo "<td>$teacher</td>";
              echo "</tr>";
