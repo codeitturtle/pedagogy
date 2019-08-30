@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <title>Document</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="css/App-Features-Carousel.css">
-    <link rel="stylesheet" href="css/Bold-BS4-Footer-Big-Logo.css">
-    <link rel="stylesheet" href="css/Features-Blue.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/Team-Clean.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/App-Features-Carousel.css">
+    <link rel="stylesheet" href="assets/css/Bold-BS4-Footer-Big-Logo.css">
+    <link rel="stylesheet" href="assets/css/Features-Blue.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/Team-Clean.css">
+    <link rel="stylesheet" href="assets/css/index.css">
     
 </head>
 <body>
     <div class="container">
         <div class="header">
             <div class="logo">
-                <img src="img/logo2.png" alt="">
+                <img src="assets/img/logo2.png" alt="">
             </div>
             <div class="navbar">
                 <ul>
@@ -30,7 +30,7 @@
         </div>
         <div class="carousel">
            
-            <script src="js/jssor.slider-27.5.0.min.js" type="text/javascript"></script>
+            <script src="assets/js/jssor.slider-27.5.0.min.js" type="text/javascript"></script>
     <script type="text/javascript">
         jssor_1_slider_init = function() {
 
@@ -140,37 +140,37 @@
     </style>
     <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:980px;height:380px;overflow:hidden;visibility:hidden;">
         <!-- Loading Screen --><div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
-            <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="img/spin.svg" />
+            <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="assets/img/spin.svg" />
         </div>
         <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:980px;height:380px;overflow:hidden;">
             <div>
-                <img data-u="image" src="img/022.jpg" />
+                <img data-u="image" src="assets/img/022.jpg" />
                 <div data-u="thumb">
-                    <img data-u="thumb" class="i" src="img/022-s96x48.jpg" />
+                    <img data-u="thumb" class="i" src="assets/img/022-s96x48.jpg" />
                     <span class="ti">Title</span><br />
                     <span class="d">Slide Description</span>
                 </div>
             </div>
             <div>
-                <img data-u="image" src="img/023.jpg" />
+                <img data-u="image" src="assets/img/023.jpg" />
                 <div data-u="thumb">
-                    <img data-u="thumb" class="i" src="img/023-s96x48.jpg" />
+                    <img data-u="thumb" class="i" src="assets/img/023-s96x48.jpg" />
                     <span class="ti">Title</span><br />
                     <span class="d">Slide Description</span>
                 </div>
             </div>
             <div>
-                <img data-u="image" src="img/024.jpg" />
+                <img data-u="image" src="assets/img/024.jpg" />
                 <div data-u="thumb">
-                    <img data-u="thumb" class="i" src="img/024-s96x48.jpg" />
+                    <img data-u="thumb" class="i" src="assets/img/024-s96x48.jpg" />
                     <span class="ti">Title</span><br />
                     <span class="d">Slide Description</span>
                 </div>
             </div>
             <div>
-                <img data-u="image" src="img/025.jpg" />
+                <img data-u="image" src="assets/img/025.jpg" />
                 <div data-u="thumb">
-                    <img data-u="thumb" class="i" src="img/025-s96x48.jpg" />
+                    <img data-u="thumb" class="i" src="assets/img/025-s96x48.jpg" />
                     <span class="ti">Title</span><br />
                     <span class="d">Slide Description</span>
                 </div>
@@ -238,19 +238,19 @@
                 <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae. </p>
             </div>
             <div class="row people">
-                <div class="col-md-6 col-lg-4 item"><img class="rounded-circle" src="/img/1.jpg">
+                <div class="col-md-6 col-lg-4 item"><img class="rounded-circle" src="assets/img/1.jpg">
                     <h3 class="name">Telisha Rai</h3>
                     <p class="title">Web Developer</p>
                     <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, et interdum justo suscipit id. Etiam dictum feugiat tellus, a semper massa. </p>
                     <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
                 </div>
-                <div class="col-md-6 col-lg-4 item"><img class="rounded-circle" src="/img/2.jpg">
+                <div class="col-md-6 col-lg-4 item"><img class="rounded-circle" src="assets/img/2.jpg">
                     <h3 class="name">Binita Shrestha</h3>
                     <p class="title">Web Developer</p>
                     <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, et interdum justo suscipit id. Etiam dictum feugiat tellus, a semper massa. </p>
                     <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
                 </div>
-                <div class="col-md-6 col-lg-4 item"><img class="rounded-circle" src="/img/3.jpg">
+                <div class="col-md-6 col-lg-4 item"><img class="rounded-circle" src="assets/img/3.jpg">
                     <h3 class="name">Muna Tamang</h3>
                     <p class="title">Web Developer</p>
                     <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, et interdum justo suscipit id. Etiam dictum feugiat tellus, a semper massa. </p>
@@ -261,7 +261,7 @@
                         <div class="container-fluid">
                             <div class="row text-center">
                                 <div class="col-12 col-sm-6 col-md-3">
-                                    <h1 class="logo" style="margin-top:30px;"><a href="#">&nbsp;<img  style="width: 100px; height: 100px"src="img/logo2.png" alt="">&nbsp;</a></h1>
+                                    <h1 class="logo" style="margin-top:30px;"><a href="#">&nbsp;<img  style="width: 100px; height: 100px"src="assets/img/logo2.png" alt="">&nbsp;</a></h1>
                                 </div>
                                 <div class="col-12 col-sm-6 col-md-2">
                                     <h5>Get started</h5>

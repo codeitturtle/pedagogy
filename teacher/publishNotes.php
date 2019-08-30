@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Notes Publish</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
@@ -36,7 +36,7 @@
       <a class="navbar-brand" href="#">Notices</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="home.php">Home</a></li>
+      <li><a href="home.php">Home</a></li>
       <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Assignment<span class="caret"></span></a>
         <ul class="dropdown-menu">
@@ -44,7 +44,7 @@
           <li><a href="receiveAssignment.php">Receive</a></li>
       </ul>
       </li>
-       <li class="dropdown">
+       <li class="dropdown active">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Notes<span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="publishNotes.php">Publish</a></li>

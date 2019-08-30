@@ -75,6 +75,7 @@
     <link rel="stylesheet" href="assets/css/Team-Grid.css">
     <link rel="stylesheet" href="assets/css/title-bullets.css">
     <link rel="stylesheet" href="assets/css/vertical-tabs-with-links-and-contents.css">
+    <title>Student Homepage</title>
 </head>
 
 <body class="text-primary">  <header class="" id="km-header">
@@ -85,13 +86,13 @@
           <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav m-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="studenthome.php">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Programme</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Notes</a>
+                <a class="nav-link" href="receivenotes.php">Notes</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Assignment</a>
