@@ -37,7 +37,7 @@
        <li class="dropdown active">
         <a class="dropdown-toggle" data-toggle="dropdown" href="receivenotes.php">Notes<span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="publishNotes.php">Publish</a></li>
+          <li><a href="publishNotes.php">Receive</a></li>
            </ul>
       </li>
       <li class=""><a href="#">Events</a></li>
