@@ -9,36 +9,35 @@
     $error=$_FILES['file']['error'];
     $remarks=$_POST['txtRemarks'];
     $postby=$_POST['txtPost'];
+
+        
         
          if($error == 0) {
-            if($file_size>0){
-                if($file_type =="image/png"){
+             if($file_size > 0){
+                 if($file_type =="image/png" || $file_type=="image/jpeg"){
+                     include "connect.php";
                     
-                    include "connect.php";
-                    
-                    $insert = "INSERT INTO events (Subject,Image,Remarks,Postby) VALUES ($subject','$file_name','$remarks', '$postby')";
+                    $insert = "INSERT INTO events (Subject,Image,Remarks,Postby) VALUES ('$subject','$file_name','$remarks', '$postby')";
                     
                     if(mysqli_query($con,$insert)){
                         move_uploaded_file($temp_name,"../upload/image/$file_name");
                         echo "file uploaded";
                         header('Refresh:6;../admin/events.php');
-                    }else{
+                       }else{
                         echo("error:" . mysqli_error());
-                        header('Refresh:4;../admin/events.php');
+                        header('Refresh:4;../admin/notice.php');
                     }
                     
-                     }else{
-                     echo " invalid format";
-                    }
+                 }else{
+                    echo"invalid format";
                 }
-                    else{
-                        echo "invalid size";
-                        }
-                }
-                else{
-                    echo "error found";
-                    }
-        
-         
+            }else{
+                echo"no-file enter";
             }
+        }else{
+            echo "error found";
+        }
+        
+        }
+
 ?>
