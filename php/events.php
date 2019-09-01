@@ -9,14 +9,10 @@
     $error=$_FILES['file']['error'];
     $remarks=$_POST['txtRemarks'];
     $postby=$_POST['txtPost'];
-
-        
-        
-         if($error == 0) {
+        if($error == 0) {
              if($file_size > 0){
                  if($file_type =="image/png" || $file_type=="image/jpeg"){
                      include "connect.php";
-                    
                     $insert = "INSERT INTO events (Subject,Image,Remarks,Postby) VALUES ('$subject','$file_name','$remarks', '$postby')";
                     
                     if(mysqli_query($con,$insert)){
@@ -33,11 +29,16 @@
                 }
             }else{
                 echo"no-file enter";
-            }
-        }else{
-            echo "error found";
-        }
+                       
+                        echo "invalid size";
+                        }
+                }else{
+                    echo "error found";
+                    }
         
-        }
+            }
+       
+        
+        
 
 ?>
