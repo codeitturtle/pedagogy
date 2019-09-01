@@ -45,18 +45,18 @@
         <ul class="dropdown-menu">
           <li><a href="publishAssignment.php">Publish</a></li>
           <li><a href="receiveAssignment.php">Receive</a></li>
-          
-        </ul>
+           </ul>
       </li>
        <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Notes<span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="publishNotes.php">Publish</a></li>
-          
-        </ul>
+          </ul>
       </li>
       <li class=""><a href="#">Events</a></li>
-      
+      </ul>
+       <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Log</outa></li>
     </ul>
   </div>
 </nav>

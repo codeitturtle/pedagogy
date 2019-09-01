@@ -73,6 +73,9 @@
       <li class=""><a href="">Events</a></li>
       
     </ul>
+     <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Logout</li>
+    </ul>
   </div>
 </nav>
   
@@ -98,10 +101,26 @@
     </div>
     <div class="col-sm-7 text-center" style="margin-bottom: 15pz;"> 
      <h1 style="text-align: center;">Notices</h1>
+     <?php
+                include "../php/connect.php";
+                $query = "select * from notice order by id desc limit 1";
+                $result=mysqli_query($con,$query);
+                if(mysqli_num_rows($result)>0){
+                    while($record=mysqli_fetch_assoc($result)){
+                        $date=$record['Date'];
+                        $subject=$record['Subject'];
+                        $remarks=$record['Remarks'];
+                        $file_name=$record['Notice'];
+                        echo "<p>$remarks</p>";
+                        echo "<small>post on:$date</small>";
+                        echo "<br>";
+                         echo "<a href='../upload/notice/$file_name'>Download</a>";
+                    }
+                }
+           ?>
       <hr>
        </div>
        
-         <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, earum!.</p>
      </div>
       <div class="row">
            <div class="section text-center">
