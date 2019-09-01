@@ -48,41 +48,36 @@
   </div>
 </nav>
 <div class="container text-center">
-  <h2>Assignment table</h2>
-  <p>The table showing assignment of students.</p>            
+  <h1>Events</h1>            
   <table class="table table-hover ">
     <thead>
       <tr>
-         <th scope="col">#</th>
-         <th scope="col">Date</th>
-         <th scope="col">SubjectCode</th>
-         <th scope="col">Faculty</th>
-         <th scope="col">Student</th>
-         <th scope="col">Assignment</th>
-
-      </tr>
+        
+         <th scope="col">Subject</th>
+         <th scope="col">Image</th>
+         <th scope="col">Remarks</th>
+         <th scope="col">Postby</th>
+        </tr>
     </thead>
     <tbody>
    <?php
         
      include "../php/connect.php";
-     $query = "SELECT * FROM assignmentreceive";
+     $query = "SELECT * FROM events";
      $result = mysqli_query($con,$query);
      if(mysqli_num_rows($result) >0){
          while($record=mysqli_fetch_assoc($result)){
-             $id=$record['Id'];
-             $date=$record['Date'];
-             $subjectcode=$record['SubjectCode'];
-             $faculty=$record['Faculty'];
-             $student=$record['Student'];
-             $assignment=$record['Assignment'];
+             $subject=$record['Subject'];
+             $file_name=$record['Image'];
+             $remarks=$record['Remarks'];
+             $postby=$record['Postby'];
+            
              echo "<tr scope='row'>";
-             echo "<td>$id</td>";
-              echo "<td>$date</td>";
-              echo "<td>$subjectcode</td>";
-              echo "<td>$faculty</td>";
-              echo "<td>$student</td>";
-             echo "<td><a href='../upload/assignmentreceive/$assignment'>Download</a></td>";
+              echo "<td>$subject</td>";
+              echo "<td><a href='../upload/image/$file_name'>Download</a></td>";
+              echo "<td>$remarks</td>";
+              echo "<td>$postby</td>";
+            
              echo "</tr>";
          }
      
