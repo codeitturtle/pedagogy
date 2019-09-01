@@ -12,7 +12,7 @@
         
          if($error == 0) {
             if($file_size>0){
-                if($file_type =="image/jpeg"){
+                if($file_type =="image/png"){
                     
                     include "connect.php";
                     
