@@ -70,7 +70,7 @@
           
         </ul>
       </li>
-      <li class=""><a href="">Events</a></li>
+      <li class=""><a href="eventreceive.php">Events</a></li>
       
     </ul>
      <ul class="nav navbar-nav navbar-right">
@@ -87,7 +87,7 @@
            <h1 style="margin-bottom:45px">Upcoming Events</h1>
        </div>
         
-    </div>
+   
      <button type="button" class="btn btn-primary btn-lg" style="width: 250px;
      height: 100px; margin-bottom: 5px;">Meetings </button>
      <button type="button" class="btn btn-success btn-lg" style="width: 250px;
@@ -99,6 +99,7 @@
      
          
     </div>
+      </div>
     <div class="col-sm-7 text-center" style="margin-bottom: 15pz;"> 
      <h1 style="text-align: center;">Notices</h1>
      <?php

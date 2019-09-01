@@ -53,7 +53,7 @@
           <li><a href="publishNotes.php">Publish</a></li>
           </ul>
       </li>
-      <li class=""><a href="#">Events</a></li>
+      <li class=""><a href=eventreceive.php>Events</a></li>
       </ul>
        <ul class="nav navbar-nav navbar-right">
       <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Log</outa></li>
