@@ -19,10 +19,14 @@
             <div class="illustration"><i class="icon ion-ios-navigate" style="color: #208f8f;"></i></div>
             <div class="form-group"><input class="form-control" type="text" name="username" placeholder="Username" required></div>
             <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Password" required></div>
-            <select name="status" id="" style="margin: 0px 10px; width:120px; height:40px; padding:0px 20px ">
-                <option value="teacher">teacher</option>
-                <option value="student">student</option>
-            </select>
+            <div class="form-group">
+               <label for="usertype" class="">Usertype</label>
+                <select name="usertype" id="" style="margin: 0px 10px; width:120px; height:40px; padding:0px 20px ">
+                    <option value="teacher">teacher</option>
+                    <option value="student">student</option>
+                    <option value="admin">admin</option>
+                </select>
+            </div>
             <div class="form-group"><button class="btn btn-primary btn-block" type="submit" style="color: #fffff;background-color: #208f8f;">Log In</button></div><a href="register.html" class="forgot">Don't have account? Register here</a></form>
     </div>
     <script src="assets/js/jquery.min.js"></script>

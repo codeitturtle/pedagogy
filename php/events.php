@@ -16,26 +16,24 @@
                     
                     include "connect.php";
                     
-                    $insert = "INSERT INTO events (Subject,Image,Remarks,Postby) VALUES ($subject','$file_name','$remarks', '$postby')";
-                    
-                    if(mysqli_query($con,$insert)){
-                        move_uploaded_file($temp_name,"../upload/image/$file_name");
-                        echo "file uploaded";
-                        header('Refresh:6;../admin/events.php');
-                    }else{
-                        echo("error:" . mysqli_error());
-                        header('Refresh:4;../admin/events.php');
-                    }
+                        $insert = "INSERT INTO events (Subject,Image,Remarks,Postby) VALUES ($subject','$file_name','$remarks', '$postby')";
+
+                        if(mysqli_query($con,$insert)){
+                            move_uploaded_file($temp_name,"../upload/image/$file_name");
+                            echo "file uploaded";
+                            header('Refresh:6;../admin/events.php');
+                        }else{
+                            echo("error:" . mysqli_error());
+                            header('Refresh:4;../admin/events.php');
+                        }
                     
                      }else{
                      echo " invalid format";
                     }
-                }
-                    else{
+                }else{
                         echo "invalid size";
                         }
-                }
-                else{
+                }else{
                     echo "error found";
                     }
         
