@@ -41,7 +41,16 @@
       padding: 15px;
         margin-top:5px;
     }
-    
+      img{
+          height: 300px;
+          width: 350px;
+      }
+      
+      .section img{
+          width: 300px;
+          height: 200px;
+          
+      }
     
   </style>
 </head>
@@ -74,35 +83,17 @@
       
     </ul>
      <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Logout</li>
+         <li><a href="../login.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
     </ul>
   </div>
 </nav>
   
 <div class="container-fluid text-center">    
   <div class="row">
-    <div class="col-sm-5 sidenav" >
-    <div class="row">
-       <div class="col-md-12">
-           <h1 style="margin-bottom:45px">Upcoming Events</h1>
-       </div>
-        
-   
-     <button type="button" class="btn btn-primary btn-lg" style="width: 250px;
-     height: 100px; margin-bottom: 5px;">Meetings </button>
-     <button type="button" class="btn btn-success btn-lg" style="width: 250px;
-     height: 100px; margin-bottom: 5px;">Sports</button>
-     <button type="button" class="btn btn-warning btn-lg" style="width: 250px;
-     height: 100px; margin-bottom: 5px;">Exam</button>
-     <button type="button" class="btn btn-danger btn-lg" style="width: 250px;
-     height: 100px; margin-bottom: 5px;">Convocation</button>
-     
-         
-    </div>
-      </div>
-    <div class="col-sm-7 text-center" style="margin-bottom: 15pz;"> 
-     <h1 style="text-align: center;">Notices</h1>
-     <?php
+    <div class="col-sm-12 sidenav" >
+    
+        <img src="gallery/notice.jpeg" alt="#">
+                <?php
                 include "../php/connect.php";
                 $query = "select * from notice order by id desc limit 1";
                 $result=mysqli_query($con,$query);
@@ -118,35 +109,30 @@
                          echo "<a href='../upload/notice/$file_name'>Download</a>";
                     }
                 }
-           ?>
-      <hr>
-       </div>
-       
-     </div>
+                ?>
+      </div>
+    </div>
+    </div>
       <div class="row">
            <div class="section text-center">
-           <h1 style="margin-bottom: 25px;"> Faculty Member</h1>
+           <h1 style="margin-top: 35px;"> Faculty Member</h1>
            <hr>
             <div class="col-md-3">
-                <img src="gallery/two.jpg" alt="">
-                <h4>Science</h4>
+              <img src="gallery/two.jpg" alt="">
             </div>
             <div class="col-md-3">
-                <img src="gallery/five.jpg" alt="">
-                <h4>Commerce</h4>
-            </div>
+               <img src="gallery/five.jpg" alt="">
+             </div>
             <div class="col-md-3">
-                <img src="gallery/six.jpg" alt="">
-                 <h4>Science</h4>
-            </div>
+             <img src="gallery/six.jpg" alt="">
+           </div>
             <div class="col-md-3">
                 <img src="gallery/seven.jpg" alt="">
-                 <h4>Science</h4>
-            </div>
+             </div>
             </div>
         </div>
         <div class="row" style="margin-top: 20px;">
-           
+             <div class="section text-center">
             <div class="col-md-3">
                 <img src="gallery/seven.jpg" alt="">
                 <h4>Arts</h4>
@@ -164,7 +150,11 @@
                  <h4>Science</h4>
             </div>
             </div>
-        </div>
+    </div>
+        
+     
+        
+     
 <footer class="container-fluid text-center" style="background-color:#000;">
   <p>copyright@Pedagogy 2019</p>
 </footer>

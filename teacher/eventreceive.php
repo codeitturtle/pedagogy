@@ -74,7 +74,7 @@
             
              echo "<tr scope='row'>";
               echo "<td>$subject</td>";
-              echo "<td><a href='../upload/image/$file_name'>Download</a></td>";
+              echo "<td><img src='../upload/image/$file_name' width='250' height='300'></td>";
               echo "<td>$remarks</td>";
               echo "<td>$postby</td>";
             
