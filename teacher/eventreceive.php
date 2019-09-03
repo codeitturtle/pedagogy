@@ -17,6 +17,13 @@
       .clear{
           clear: both;
       }
+      img{
+          border-radius: 0;
+          transition-delay: .1s;
+      }
+      img:hover{
+          border-radius: 50%;
+      }
      
     </style>
 </head>
@@ -67,7 +74,7 @@
             <div class="row">
                 <div class="col-md-3">
                    
-                    <?php echo "<img src='../upload/image/$file_name' width='250' height='150'>" ?>
+                    <?php echo "<img style='border-radiius:15%;' src='../upload/image/$file_name' width='250' height='150'>" ?>
                 </div>
                 <div class="col-md-9">
                     <?php echo "<h1 style='margin-top:-10px;text-decoration:underline;'>$subject</h1>";
