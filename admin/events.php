@@ -22,6 +22,10 @@
       <label for="Subject">subject:</label>
       <input type="text" class="form-control" id="sub" placeholder="Enter " name="txtSubject">
     </div><br>
+     <div class="form-group">
+      <label for="Date">date:</label>
+      <input type="date" class="form-control" id="sub" placeholder="Enter " name="txtDate">
+    </div><br>
       <div class="form-group">
     <label for="Image">Image:</label>
     <input type="file" name="file" class="form-control-file" id="file" placeholder="upload">
