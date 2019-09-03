@@ -16,11 +16,7 @@
       margin-bottom:5px;
       border-radius:0;
         background-color: #555;
-       
-    }
-    
-   
-    
+      }
     .sidenav {
      
         margin-left: 0px;
@@ -33,13 +29,11 @@
       .section{
           margin-top:10px;
       }
-     
-   
-    footer {
+     footer {
       background-color: #555;
       color: white;
       padding: 15px;
-        margin-top:5px;
+    margin-top:15px;
     }
       img{
           height: 300px;
@@ -49,8 +43,7 @@
       .section img{
           width: 300px;
           height: 200px;
-          
-      }
+     }
     
   </style>
 </head>
@@ -59,7 +52,7 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Notice</a>
+      <a class="navbar-brand" href="#">Teacher</a>
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="home.php">Home</a></li>
@@ -134,30 +127,21 @@
         <div class="row" style="margin-top: 20px;">
              <div class="section text-center">
             <div class="col-md-3">
-                <img src="gallery/seven.jpg" alt="">
-                <h4>Arts</h4>
+            <img src="gallery/seven.jpg" alt="">
             </div>
             <div class="col-md-3">
                 <img src="gallery/two.jpg" alt="">
-                <h4>Commerce</h4>
             </div>
             <div class="col-md-3">
-                <img src="gallery/five.jpg" alt="">
-                 <h4>Arts</h4>
+            <img src="gallery/five.jpg" alt="">
             </div>
             <div class="col-md-3">
                 <img src="gallery/six.jpg" alt="">
-                 <h4>Science</h4>
-            </div>
+             </div>
             </div>
     </div>
-        
-     
-        
-     
 <footer class="container-fluid text-center" style="background-color:#000;">
   <p>copyright@Pedagogy 2019</p>
 </footer>
-
 </body>
 </html>
