@@ -66,6 +66,7 @@
      if(mysqli_num_rows($result) >0){
          while($record=mysqli_fetch_assoc($result)){
              $subject=$record['Subject'];
+             $date=$record['Date'];
              $file_name=$record['Image'];
              $remarks=$record['Remarks'];
              $postby=$record['Postby'];
@@ -78,6 +79,7 @@
                 </div>
                 <div class="col-md-9">
                     <?php echo "<h1 style='margin-top:-10px;text-decoration:underline;'>$subject</h1>";
+                        echo "$date";
                         echo"<p>$remarks </p>";
                         echo "<h4 style='float:right;color:#444'>Post by:$postby</h4>";
                     ?>
