@@ -48,50 +48,66 @@
             <div
                 class="collapse navbar-collapse" id="navcol-1" style="background-color: #825889;padding-left: 20px;">
                 <ul class="nav navbar-nav ml-auto" style="margin-top:13px;">
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="#" uk-scroll="offset:50">Home </a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="#empresa" uk-scroll="offset:100">Notice</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="#areas" uk-scroll="offset:100">notes</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="index.php" uk-scroll="offset:50">Home </a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="notice.php" uk-scroll="offset:100">Notice</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="notes.php" uk-scroll="offset:100">notes</a></li>
                     <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Assignment</a>
-                        <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">First Item</a><a class="dropdown-item" role="presentation" href="#">Second Item</a><a class="dropdown-item" role="presentation" href="#">Third Item</a></div>
+                        <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="submitAssignment.php">Assignment Submit</a><a class="dropdown-item" role="presentation" href="viewAssignment.php">Assignment Receive</a></div>
                     </li>
-                    <li class="nav-item" role="presentation"><a class="nav-link active" href="#">Event</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="#diferencial" uk-scroll="offset:50">Log Out</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="event.php">Event</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="../index.php" uk-scroll="offset:50">Log Out</a></li>
                 </ul>
         </div>
         </div>
     </nav>
     <div class="alert alert-success" role="alert"><span><strong>Welcome To Student Area!</strong></span></div>
-    <div class="carousel slide" data-ride="carousel" id="carousel-1">
-        <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active">
-                <div class="jumbotron hero-nature carousel-hero">
-                    <h1 class="hero-title">Hero Nature</h1>
-                    <p class="hero-subtitle">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
-                    <p><a class="btn btn-primary btn-lg hero-button" role="button" href="#">Learn more</a></p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="jumbotron hero-photography carousel-hero">
-                    <h1 class="hero-title">Hero Photography</h1>
-                    <p class="hero-subtitle">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
-                    <p><a class="btn btn-primary btn-lg hero-button" role="button" href="#">Learn more</a></p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="jumbotron hero-technology carousel-hero">
-                    <h1 class="hero-title">Hero Technology</h1>
-                    <p class="hero-subtitle">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
-                    <p><a class="btn btn-primary btn-lg hero-button" role="button" href="#">Learn more</a></p>
-                </div>
-            </div>
-        </div>
-        <div><a class="carousel-control-prev" href="#carousel-1" role="button" data-slide="prev"><i class="fa fa-chevron-left"></i><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#carousel-1" role="button" data-slide="next"><i class="fa fa-chevron-right"></i><span class="sr-only">Next</span></a></div>
-        <ol
-            class="carousel-indicators">
-            <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-1" data-slide-to="1"></li>
-            <li data-target="#carousel-1" data-slide-to="2"></li>
-            </ol>
+    <div class="container text-center">
+         <h2>Notes table</h2>
+  <p>The table showing notes of students.</p>            
+  <table class="table table-hover ">
+    <thead>
+      <tr>
+         <th scope="col">ID</th>
+         <th scope="col">SubjectCode</th>
+         <th scope="col">Faculty</th>
+         <th scope="col">Semester</th>
+         <th scope="col">Notes</th>
+         <th scope="col">Teacher</th>
+
+      </tr>
+    </thead>
+    <tbody>
+   <?php
+        
+     include "../php/connect.php";
+     $query = "SELECT * FROM notes";
+     $result = mysqli_query($con,$query);
+     if(mysqli_num_rows($result) >0){
+         while($record=mysqli_fetch_assoc($result)){
+             $id=$record['Id'];
+             $subjectcode=$record['SubjectCode'];
+             $faculty=$record['Faculty'];
+             $semester=$record['Semester'];
+             $note=$record['Notes'];
+             $teacher=$record['Teacher'];
+             echo "<tr scope='row'>";
+             echo "<td>$id</td>";
+              echo "<td>$subjectcode</td>";
+              echo "<td>$faculty</td>";
+              echo "<td>$semester</td>";
+             echo "<td><a href='../upload/notesTech/$note'>Download</a></td>";
+             echo "<td>$teacher</td>";
+             echo "</tr>";
+         }
+     
+        
+     }
+
+        
+           
+        ?>
+    </tbody>
+  </table>
     </div>
     <footer style="background-color: #825889;">
         <div class="row">

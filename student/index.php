@@ -48,14 +48,14 @@
             <div
                 class="collapse navbar-collapse" id="navcol-1" style="background-color: #825889;padding-left: 20px;">
                 <ul class="nav navbar-nav ml-auto" style="margin-top:13px;">
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="#" uk-scroll="offset:50">Home </a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="#empresa" uk-scroll="offset:100">Notice</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="#areas" uk-scroll="offset:100">notes</a></li>
-                    <li class="nav-item dropdown show"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="true" href="viewAssignment.html">Assignment</a>
-                        <div class="dropdown-menu show" role="menu" style="background-color: #c6c0c0;"><a class="dropdown-item border rounded-0" role="presentation" href="viewAssignment.html">View Assignment</a><a class="dropdown-item border rounded-0" role="presentation" href="submitAssignment.html" style="background-color: #c6c0c0;">Submit Assignment</a></div>
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="index.php" uk-scroll="offset:50">Home </a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="notice.php" uk-scroll="offset:100">Notice</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="receivenotes.php" uk-scroll="offset:100">notes</a></li>
+                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Assignment</a>
+                        <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="su">Assignment Submit</a><a class="dropdown-item" role="presentation" href="#">Assignment Receive</a></div>
                     </li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="#">Event</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="#diferencial" uk-scroll="offset:50">Log Out</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="event.html">Event</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="../index.php" uk-scroll="offset:50">Log Out</a></li>
                 </ul>
         </div>
         </div>
@@ -66,10 +66,10 @@
             <div class="col-lg-3">
                 <div class="row">
                     <div class="col-lg-10" style="margin-left: -15px;">
-                        <div class="list-group"><a href="index.html" class="list-group-item list-group-item-action" data-toggle="list" style="background-color: #c6c0c0;">Home</a><a href="notice.html" class="list-group-item list-group-item-action" data-toggle="list" style="background-color: #c6c0c0;">Notice</a>
+                        <div class="list-group"><a href="#list-home" class="list-group-item list-group-item-action" data-toggle="list" style="background-color: #c6c0c0;">Home</a><a href="#list-profile" class="list-group-item list-group-item-action" data-toggle="list" style="background-color: #c6c0c0;">Notice</a>
                             <a
-                                href="notes.html" class="list-group-item list-group-item-action" data-toggle="list" style="background-color: #c6c0c0;">Notes</a><a href="viewAssignment.html" class="list-group-item list-group-item-action" data-toggle="list" style="background-color: #c6c0c0;">View Assignment</a><a href="submitAssignment.html" class="list-group-item list-group-item-action"
-                                    data-toggle="list" style="background-color: #c6c0c0;">Submit Assignment</a><a href="event.html" class="list-group-item list-group-item-action" data-toggle="list" style="background-color: #c6c0c0;">Event</a><a href="login.php"
+                                href="#list-messages" class="list-group-item list-group-item-action" data-toggle="list" style="background-color: #c6c0c0;">Notes</a><a href="#list-settings" class="list-group-item list-group-item-action" data-toggle="list" style="background-color: #c6c0c0;">View Assignment</a><a href="#list-settings" class="list-group-item list-group-item-action"
+                                    data-toggle="list" style="background-color: #c6c0c0;">Submit Assignment</a><a href="#list-settings" class="list-group-item list-group-item-action" data-toggle="list" style="background-color: #c6c0c0;">Event</a><a href="#list-settings"
                                     class="list-group-item list-group-item-action" data-toggle="list" style="background-color: #c6c0c0;">Log Out</a></div>
                     </div>
                     <div class="col">
@@ -102,44 +102,60 @@
                 </div>
             </div>
             <div class="col">
-                <div>
-                    <p style="margin-top: 5px;"><strong>Submit your assignments! &nbsp;</strong></p>Students are required to upload their assignments in the given deadline. If students fail to submit their assignments within the given deadline, they are rewarded 0 marks in the subject and have to retake their assignments.
-                    <div class="row register-form">
-                        <div class="col-md-8 offset-md-2" style="padding-right: 0px;padding-left: 0px;">
-                            <form class="custom-form" style="padding: 20px;">
-                                <h1 style="font-family: Actor, sans-serif;font-size: 30px;">Assignment Submission</h1>
-                                <div class="form-row form-group">
-                                    <div class="col-sm-4 label-column"><label class="col-form-label" for="name-input-field">Name </label></div>
-                                    <div class="col-sm-6 input-column"><input class="form-control" type="text"></div>
-                                </div>
-                                <div class="form-row form-group">
-                                    <div class="col-sm-4 label-column"><label class="col-form-label" for="name-input-field">Batch</label></div>
-                                    <div class="col-sm-6 input-column">
-                                        <div class="dropdown"><button class="btn btn-primary active dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button">BCA</button>
-                                            <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">First Item</a><a class="dropdown-item" role="presentation" href="#">Second Item</a><a class="dropdown-item" role="presentation" href="#">Third Item</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-row form-group">
-                                    <div class="col-sm-4 label-column"><label class="col-form-label" for="name-input-field">Semster</label></div>
-                                    <div class="col-sm-6 input-column">
-                                        <div class="dropdown"><button class="btn btn-primary active dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button">First</button>
-                                            <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">First Item</a><a class="dropdown-item" role="presentation" href="#">Second Item</a><a class="dropdown-item" role="presentation" href="#">Third Item</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-row form-group">
-                                    <div class="col-sm-4 label-column"><label class="col-form-label" for="name-input-field">Subject Code</label></div>
-                                    <div class="col-sm-6 input-column"><input class="form-control" type="text"></div>
-                                </div>
-                                <div class="form-row form-group">
-                                    <div class="col-sm-4 label-column"><label class="col-form-label" for="email-input-field">Teacher</label></div>
-                                    <div class="col-sm-6 input-column"><input class="form-control" type="text"></div>
-                                </div>
-                                <div class="form-row form-group">
-                                    <div class="col-sm-4 label-column"><label class="col-form-label" for="pawssword-input-field">Upload a file</label></div>
-                                    <div class="col-sm-6 input-column"><input type="file"></div>
-                                </div><button class="btn btn-light submit-button" type="button" style="background-color: rgb(23,147,241);">Submit</button></form>
+                <div class="row">
+                    <div class="col-sm-4 col-md-4 col-xl-4">
+                        <div class="serviceBox yellow">
+                            <div class="service-icon" style="height: 75px;background-color: #c6c0c0;"><a href="#"></a>
+                                <h4 style="color: rgb(38,42,47);font-family: Actor, sans-serif;">Notice</h4>
+                            </div>
+                            <div class="service-content">
+                                <hr>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nisi risus, condimentum et orci quis, gravida maximus mauris. Praesent varius dolor eget ligula gravida mollis. Praesent ac. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-xl-4">
+                        <div class="serviceBox yellow">
+                            <div class="service-icon" style="height: 75px;background-color: #c6c0c0;"><a href="#"></a>
+                                <h4 style="color: rgb(38,42,47);font-family: Actor, sans-serif;">Notes</h4>
+                            </div>
+                            <div class="service-content">
+                                <hr>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nisi risus, condimentum et orci quis, gravida maximus mauris. Praesent varius dolor eget ligula gravida mollis. Praesent ac. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-xl-4">
+                        <div class="serviceBox yellow">
+                            <div class="service-icon" style="height: 75px;background-color: #c6c0c0;"><a href="#"></a>
+                                <h4 style="color: rgb(38,42,47);font-family: Actor, sans-serif;">View Assignment</h4>
+                            </div>
+                            <div class="service-content">
+                                <hr>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nisi risus, condimentum et orci quis, gravida maximus mauris. Praesent varius dolor eget ligula gravida mollis. Praesent ac. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-xl-4">
+                        <div class="serviceBox yellow">
+                            <div class="service-icon" style="height: 75px;background-color: #c6c0c0;"><a href="#"></a>
+                                <h4 style="color: rgb(38,42,47);font-family: Actor, sans-serif;">Submit Assignment</h4>
+                            </div>
+                            <div class="service-content">
+                                <hr>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nisi risus, condimentum et orci quis, gravida maximus mauris. Praesent varius dolor eget ligula gravida mollis. Praesent ac. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-xl-4">
+                        <div class="serviceBox yellow">
+                            <div class="service-icon" style="height: 75px;background-color: #c6c0c0;"><a href="#"></a>
+                                <h4 style="color: rgb(38,42,47);font-family: Actor, sans-serif;">Event</h4>
+                            </div>
+                            <div class="service-content">
+                                <hr>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nisi risus, condimentum et orci quis, gravida maximus mauris. Praesent varius dolor eget ligula gravida mollis. Praesent ac. </p>
+                            </div>
                         </div>
                     </div>
                 </div>
