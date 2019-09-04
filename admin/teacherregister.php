@@ -1,8 +1,4 @@
-<?php
-    if(isset($_POST['btnSubmit'])){
-        
-    }
-?>
+
 <!DOCTYPE html>
 <html>
 
@@ -14,6 +10,10 @@
     <link rel="stylesheet" href="../assets/css/Pretty-Registration-Form.css">
     <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
+<style>
+    form{
+     max-height: 100%;
+    </style>
 
 <body>
     <div class="row register-form">
@@ -38,10 +38,10 @@
                 </div>
                 <div class="form-group" style="width: 462px;height: 49px;padding: -15px;filter: contrast(117%);">
                     <div class="col-sm-4 label-column" style="height: 23px;"><label class="control-label" for="dropdown-input-field" style="margin: 20px;width: 54px;">Faculty</label></div>
-                    <div class="col-sm-4 input-column" style="width: 208px;height: 44px;padding: 0px;">
+                    <div class="col-sm-6 input-column" style="width: 208px;height: 44px;padding: 0px;">
                         <select name="faculty" class="form-control" style="margin: 20px;padding: 9px;height: 43px;color: #625d5d;width: 197px;">
                             <?php
-                                include "php/connect.php";
+                                include "../php/connect.php";
                                 $query = "SELECT * FROM faculty";
                                 $result = mysqli_query($con,$query);
                                 while($record =mysqli_fetch_assoc($result)){
@@ -54,16 +54,6 @@
                         </select>
                     </div>
                 </div>
-                <div class="form-group" style="width: 462px;height: 62px;padding: -10px;filter: contrast(117%);">
-                    <div class="col-sm-4 label-column" style="height: 23px;"><label class="control-label" for="dropdown-input-field" style="margin: 20px;width: 54px;">Semester</label></div>
-                    <div class="col-sm-4 input-column" style="width: 208px;height: 44px;padding: 0px;color: #f2eded;">
-                        <select name="semester" class="form-control" style="margin: 20px;padding: 0px;height: 43px;color: #625d5d;width: 197px;">
-                            <option value="first">first</option>
-                            <option value="second">second</option>
-                            <option value="third">third</option>
-                        </select>
-                    </div>
-                </div>
                 <div class="form-group">
                     <div class="col-sm-4 label-column"><label class="control-label" for="email-input-field">Address</label></div>
                     <div class="col-sm-6 input-column"><input class="form-control" type="text" name="address"></div>
@@ -73,10 +63,11 @@
                     <div class="col-sm-6 input-column"><input class="form-control" type="tel" name="mobile" required></div>
                 </div>
                 <div class="form-group">
-                    <input  type="file" name="file">
-                </div>
+                    <div class="col-sm-4 label-column"><label class="control-label" for="email-input-field">Contact No</label></div>
+                    <div class="col-sm-6 input-column"><input class="form-control" type="file" name="file" required></div>
                 
-                <div class="checkbox"><label><input type="checkbox">I've read and accept the terms and conditions</label></div><button class="btn btn-default submit-button" type="submit" name="btnSubmit">Submit</button></form>
+                
+                <div class="checkbox"><label><input type="checkbox">I've read and accept the terms and conditions</label></div><button class="btn btn-default  btn-sm submit-button" type="submit" name="btnSubmit">Submit</button></form>
         </div>
     </div>
     <script src="assets/js/jquery.min.js"></script>

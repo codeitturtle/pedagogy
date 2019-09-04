@@ -26,7 +26,7 @@
                        move_uploaded_file($temp_name,../upload/image/$file_name);
 
                        echo"Record saved";
-                       header('Refresh:4;../login.php');
+                       header('Refresh:4;../admin/adminhome.php');
                    }
                     else{
 

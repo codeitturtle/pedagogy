@@ -1,8 +1,8 @@
 
     <?php
     if (isset($_POST['btnSubmit'])) {
-     $subject=$_POST['txtSubject'];
-    $date=$POST_['txtDate'];
+    $subject=$_POST['txtSubject'];
+    $date=$_POST['txtDate'];
     $file_name=$_FILES['file']['name'];
     $file_size=$_FILES['file']['size'];
     $temp_name=$_FILES['file']['tmp_name'];
@@ -19,7 +19,7 @@
                     if(mysqli_query($con,$insert)){
                         move_uploaded_file($temp_name,"../upload/image/$file_name");
                         echo "file uploaded";
-                        header('Refresh:6;../admin/events.php');
+                        header('Refresh:0.5;../admin/adminhome.php');
                        }else{
                         echo("error:" . mysqli_error());
                         header('Refresh:4;../admin/notice.php');

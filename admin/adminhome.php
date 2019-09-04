@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+<title>Admin Page</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -34,10 +34,10 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   </div>
   <div class="w3-bar-block">
     <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-users fa-fw"></i>  Overview</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw"></i>Teacher Register</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>Events</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bell fa-fw"></i>Notice</a>
+    <a href="adminhome.php" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-users fa-fw"></i>  Overview</a>
+    <a href="teacherregister.php" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw"></i>Teacher Register</a>
+    <a href="events.php" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>Events</a>
+    <a href="notice.php" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bell fa-fw"></i>Notice</a>
     <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bank fa-fw"></i>  General</a>
     <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-history fa-fw"></i>  History</a>
     <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Settings</a><br><br>
@@ -105,6 +105,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
         <h5>Regions</h5>
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14242.646547622528!2d87.2862968!3d26.8189005!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9b8526c7c4c7bc1c!2sCode%20IT!5e0!3m2!1sen!2snp!4v1567575380237!5m2!1sen!2snp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
       </div>
+    
      <div class="w3-third">
         <h5>Feeds</h5>
         <table class="w3-table w3-striped w3-white">
@@ -144,7 +145,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
             <td><i>39 mins</i></td>
           </tr>
         </table>
-     </div>
+  </div>
     </div>
   </div>
   <hr>
@@ -195,9 +196,11 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
      <button class="btn btn-primary btn-lg" style="width:200px; height:60px;">Events</button>
       
       </div>
-      <div class="w3-container w3-third">
-         <button class="btn btn-primary btn-lg" style="width:200px; height:60px;">Notice</button>
+        <div class="w3-container w3-third">
+     <button class="btn btn-primary btn-lg" style="width:200px; height:60px;">Teacher-list</button>
+      
       </div>
+      
     </div>
   </div>
 
