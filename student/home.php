@@ -48,13 +48,16 @@
                 <ul class="nav navbar-nav ml-auto" style="margin-top:13px;">
                     <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html" uk-scroll="offset:50">Home </a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="notice.php" uk-scroll="offset:100">Notice</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="notes.html" uk-scroll="offset:100">Notes</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="recieveNotes.html" uk-scroll="offset:100">Notes</a></li>
                       
-                       <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false"                 href="#">Assignment</a>
-                        <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="viewAssignment.html">View Assignment</a><a class="dropdown-item" role="presentation" href="submitAssignment.html">Submit Assignment</a>
+                      <li class="nav-item dropdown show">
+                       <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="true"        href="#">Assignment</a>
+                        <div class="dropdown-menu show" role="menu" style="background-color: #c6c0c0;">
+                        <a class="dropdown-item border rounded-0" role="presentation" href="viewAssignment.html">View Assignment</a>
+                        <a class="dropdown-item border rounded-0" role="presentation" href="submitAssignment.html" style="background-color: #c6c0c0;">Submit Assignment</a></div>
                     </li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="#">Event</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="#diferencial" uk-scroll="offset:50">Log Out</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="../login.php" uk-scroll="offset:50">Log Out</a></li>
                 </ul>
                
                 </div>

@@ -52,10 +52,12 @@
                     <li class="nav-item" role="presentation"><a class="nav-link" href="notice.php" uk-scroll="offset:100">Notice</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="notes.html" uk-scroll="offset:100">Notes</a></li>
                     <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Assignment</a>
-                        <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="viewAssignment.html">First Item</a><a class="dropdown-item" role="presentation" href="submitAssignment.html">Second Item</a></div>
+                        <div class="dropdown-menu" role="menu">
+                        <a class="dropdown-item" role="presentation" href="viewAssignment.html">View</a>
+                        <a class="dropdown-item" role="presentation" href="submitAssignment.html">Submit</a></div>
                     </li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="event.html">Event</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="login.php" uk-scroll="offset:50">Log Out</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="../login.php" uk-scroll="offset:50">Log Out</a></li>
                 </ul>
         </div>
         </div>
@@ -66,13 +68,14 @@
             <div class="col-lg-3">
                 <div class="row">
                     <div class="col-lg-10" style="margin-left: -15px;">
-                        <div class="list-group"><a href="index.html" class="list-group-item list-group-item-action" data-toggle="list" style="background-color: #c6c0c0;">Home</a>
-                           <a href="notice.php" class="list-group-item list-group-item-action" data-toggle="list" style="background-color: #c6c0c0;">Notice</a>
-                            <a href="#list-messages" class="list-group-item list-group-item-action" data-toggle="list" style="background-color: #c6c0c0;">Notes</a>
-                            <a href="viewAssignment.html" class="list-group-item list-group-item-action" data-toggle="list" style="background-color: #c6c0c0;">View Assignment</a>
-                            <a href="submitAssignment.html" class="list-group-item list-group-item-action" data-toggle="list" style="background-color: #c6c0c0;">Submit Assignment</a>
-                            <a href="event.html" class="list-group-item list-group-item-action" data-toggle="list" style="background-color: #c6c0c0;">Event</a>
-                            <a href="login.php" class="list-group-item list-group-item-action" data-toggle="list" style="background-color: #c6c0c0;">Log Out</a></div>
+                        <div class="list-group">
+                        <a href="index.html" class="list-group-item list-group-item-action" style="background-color: #c6c0c0;">Home</a>
+                           <a href="notice.php" class="list-group-item list-group-item-action"  style="background-color: #c6c0c0;">Notice</a>
+                            <a href="receivenotes.php" class="list-group-item list-group-item-action" style="background-color: #c6c0c0;">Notes</a>
+                            <a href="viewAssignment.html" class="list-group-item list-group-item-action" style="background-color: #c6c0c0;">View Assignment</a>
+                            <a href="submitAssignment.html" class="list-group-item list-group-item-action"  style="background-color: #c6c0c0;">Submit Assignment</a>
+                            <a href="event.html" class="list-group-item list-group-item-action"  style="background-color: #c6c0c0;">Event</a>
+                            <a href="../login.php" class="list-group-item list-group-item-action" style="background-color: #c6c0c0;">Log Out</a></div>
                     </div>
                   
                 </div>
@@ -83,8 +86,8 @@
                 <div class="row">
                     <div class="col-sm-4 col-md-4 col-xl-4">
                         <div class="serviceBox yellow">
-                            <div class="service-icon" style="height: 75px;background-color: #c6c0c0;"><a href="#"></a>
-                                <h4 style="color: rgb(38,42,47);font-family: Actor, sans-serif;">Notice</h4>
+                            <div class="service-icon" style="height: 75px;background-color: #c6c0c0;"><a href="notice.php">
+                                <h4 style="color: rgb(38,42,47);font-family: Actor, sans-serif;">Notice</h4></a>
                             </div>
                             <div class="service-content">
                                 <hr>
@@ -94,8 +97,8 @@
                     </div>
                     <div class="col-sm-4 col-md-4 col-xl-4">
                         <div class="serviceBox yellow">
-                            <div class="service-icon" style="height: 75px;background-color: #c6c0c0;"><a href="#"></a>
-                                <h4 style="color: rgb(38,42,47);font-family: Actor, sans-serif;">Notes</h4>
+                            <div class="service-icon" style="height: 75px;background-color: #c6c0c0;"><a href="receivenotes.php">
+                                <h4 style="color: rgb(38,42,47);font-family: Actor, sans-serif;">Notes</h4></a>
                             </div>
                             <div class="service-content">
                                 <hr>
@@ -105,8 +108,8 @@
                     </div>
                     <div class="col-sm-4 col-md-4 col-xl-4">
                         <div class="serviceBox yellow">
-                            <div class="service-icon" style="height: 75px;background-color: #c6c0c0;"><a href="#"></a>
-                                <h4 style="color: rgb(38,42,47);font-family: Actor, sans-serif;">View Assignment</h4>
+                            <div class="service-icon" style="height: 75px;background-color: #c6c0c0;"><a href="viewAssignment.html">
+                                <h4 style="color: rgb(38,42,47);font-family: Actor, sans-serif;">View Assignment</h4></a>
                             </div>
                             <div class="service-content">
                                 <hr>
@@ -116,8 +119,8 @@
                     </div>
                     <div class="col-sm-4 col-md-4 col-xl-4">
                         <div class="serviceBox yellow">
-                            <div class="service-icon" style="height: 75px;background-color: #c6c0c0;"><a href="#"></a>
-                                <h4 style="color: rgb(38,42,47);font-family: Actor, sans-serif;">Submit Assignment</h4>
+                            <div class="service-icon" style="height: 75px;background-color: #c6c0c0;"><a href="submitAssignment.php">
+                                <h4 style="color: rgb(38,42,47);font-family: Actor, sans-serif;">Submit Assignment</h4></a>
                             </div>
                             <div class="service-content">
                                 <hr>
@@ -127,8 +130,8 @@
                     </div>
                     <div class="col-sm-4 col-md-4 col-xl-4">
                         <div class="serviceBox yellow">
-                            <div class="service-icon" style="height: 75px;background-color: #c6c0c0;"><a href="#"></a>
-                                <h4 style="color: rgb(38,42,47);font-family: Actor, sans-serif;">Event</h4>
+                            <div class="service-icon" style="height: 75px;background-color: #c6c0c0;"><a href="event.html">
+                                <h4 style="color: rgb(38,42,47);font-family: Actor, sans-serif;">Event</h4></a>
                             </div>
                             <div class="service-content">
                                 <hr>
@@ -144,15 +147,14 @@
         <div class="row">
             <div class="col">
                 <h2 style="font-family: Actor, sans-serif;">ABC College</h2>
-                <p class="links"><a href="#" style="color: rgb(243,244,245);">Home</a><strong> · </strong><a href="#" style="color: rgb(243,244,245);">Blog</a><strong> · </strong><a href="#" style="color: rgb(243,244,245);">Pricing</a><strong> · </strong><a href="#" style="color: rgb(243,244,245);">About</a><strong> · </strong>
-                    <a
-                        href="#" style="color: rgb(243,244,245);">Faq</a><strong> · </strong><a href="#" style="color: rgb(243,244,245);">Contact</a></p>
+                <p class="links"><a href="index.html" style="color: rgb(243,244,245);">Home</a><strong> · </strong><a href="notice.php" style="color: rgb(243,244,245);">Notice</a><strong> · </strong><a href="receivenotes.php" style="color: rgb(243,244,245);">Notes</a><strong> · </strong><a href="viewAssignment.html" style="color: rgb(243,244,245);">View Assignment</a><strong> · </strong>
+                    <a href="#" style="color: rgb(243,244,245);">Faq</a><strong> · </strong><a href="#" style="color: rgb(243,244,245);">Contact</a></p>
             </div>
             <div class="col">
                 <div></div>
                 <p><i class="fa fa-map-marker"></i>&nbsp; &nbsp; &nbsp;Dharan-10</p>
                 <p><i class="fa fa-phone-square"></i>&nbsp; &nbsp;+123456789</p>
-                <p><i class="icon ion-email"></i>&nbsp; &nbsp; maile@company.com</p>
+                <p><i class="icon ion-email"></i>&nbsp; &nbsp; <a href="#" target="_blank">mail@company.com</a></p>
             </div>
             <div class="col">
                 <div>
