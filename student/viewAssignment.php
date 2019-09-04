@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -27,9 +26,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Indie+Flower">
     <link rel="stylesheet" href="assets/css/Bold-BS4-Footer-Big-Logo.css">
-    <link rel="stylesheet" href="assets/css/Carousel_Image_Slider-1.css">
-    <link rel="stylesheet" href="assets/css/Carousel_Image_Slider.css">
-    <link rel="stylesheet" href="assets/css/Carousel-Hero.css">
     <link rel="stylesheet" href="assets/css/dh-navbar-inverse-1.css">
     <link rel="stylesheet" href="assets/css/dh-navbar-inverse.css">
     <link rel="stylesheet" href="assets/css/DNFeature-Boxes.css">
@@ -40,6 +36,13 @@
     <link rel="stylesheet" href="assets/css/MUSA_no-more-tables.css">
     <link rel="stylesheet" href="assets/css/Service-Box-Style-01.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        .box{
+            width: 100%;
+            height: 350px;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 
 <body>
@@ -60,7 +63,7 @@
         </div>
         </div>
     </nav>
-    <div class="container text-center ">
+    <div class="container text-center box">
         <h2>Assignment table</h2>
           <p>The table showing assignment of students.</p>            
           <table class="table table-hover ">
@@ -136,9 +139,12 @@
                     <p>Get Connected</p>
                 </div>
                 <div></div>
-                <div class="social-links social-icons"><a href="#" style="background-color: rgb(242,245,247);"><i class="fa fa-facebook" style="color: rgb(130,88,137);"></i></a><a href="#" style="background-color: rgb(249,250,251);"><i class="fa fa-twitter" style="color: #825889;"></i></a>
-                    <a
-                        href="#" style="background-color: rgb(244,245,247);"><i class="fa fa-linkedin" style="color: #825889;"></i></a><a href="#" style="background-color: rgb(249,250,251);"><i class="fa fa-github" style="color: #825889;"></i></a></div>
+                <div class="social-links social-icons">
+                    <a href="#" style="background-color: rgb(242,245,247);"><i class="fa fa-facebook" style="color: rgb(130,88,137);"></i></a>
+                    <a href="#" style="background-color: rgb(249,250,251);"><i class="fa fa-twitter" style="color: #825889;"></i></a>
+                    <a href="#" style="background-color: rgb(244,245,247);"><i class="fa fa-linkedin" style="color: #825889;"></i></a>
+                    <a href="#" style="background-color: rgb(249,250,251);"><i class="fa fa-github" style="color: #825889;"></i></a>
+                </div>
             </div>
         </div>
     </footer>
