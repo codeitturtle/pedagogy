@@ -3,6 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <style>
+        body{
+        background-color: skyblue;
+       }
+      form{
+          margin-top: 30px;
+           justify-content: center;
+           margin-left: 500px;
+           padding: 10px;
+           width: 400px;
+           max-height: 630px;
+           background-color: white;
+           border-style:solid 1px white;
+       }
+       </style>
     
 </head>
 <body>
