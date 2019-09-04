@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>studenthom</title>
+    <title>studenthome</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
@@ -26,6 +27,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Indie+Flower">
     <link rel="stylesheet" href="assets/css/Bold-BS4-Footer-Big-Logo.css">
+    <link rel="stylesheet" href="assets/css/Carousel_Image_Slider-1.css">
+    <link rel="stylesheet" href="assets/css/Carousel_Image_Slider.css">
+    <link rel="stylesheet" href="assets/css/Carousel-Hero.css">
     <link rel="stylesheet" href="assets/css/dh-navbar-inverse-1.css">
     <link rel="stylesheet" href="assets/css/dh-navbar-inverse.css">
     <link rel="stylesheet" href="assets/css/DNFeature-Boxes.css">
@@ -36,13 +40,6 @@
     <link rel="stylesheet" href="assets/css/MUSA_no-more-tables.css">
     <link rel="stylesheet" href="assets/css/Service-Box-Style-01.css">
     <link rel="stylesheet" href="assets/css/styles.css">
-    <style>
-        .box{
-            width: 100%;
-            height: 350px;
-            margin-top: 10px;
-        }
-    </style>
 </head>
 
 <body>
@@ -51,11 +48,11 @@
             <div
                 class="collapse navbar-collapse" id="navcol-1" style="background-color: #825889;padding-left: 20px;">
                 <ul class="nav navbar-nav ml-auto" style="margin-top:13px;">
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="index.php" uk-scroll="offset:50">Home </a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="index.php" uk-scroll="offset:50">Home </a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="notice.php" uk-scroll="offset:100">Notice</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="notes.php" uk-scroll="offset:100">notes</a></li>
-                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="viewAssignment.html">Assignment</a>
-                        <div class="dropdown-menu" role="menu" style="background-color: #c6c0c0;"><a class="dropdown-item border rounded-0" role="presentation" href="viewAssignment.php">View Assignment</a><a class="dropdown-item border rounded-0" role="presentation" href="submitAssignment.php" style="background-color: #c6c0c0;">Submit Assignment</a></div>
+                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Assignment</a>
+                        <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="submitAssignment.php">Assignment Submit</a><a class="dropdown-item" role="presentation" href="viewAssignment.php">Assignment Receive</a></div>
                     </li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="event.php">Event</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="../index.php" uk-scroll="offset:50">Log Out</a></li>
@@ -63,58 +60,50 @@
         </div>
         </div>
     </nav>
-    <div class="container text-center box">
-        <h2>Assignment table</h2>
-          <p>The table showing assignment of students.</p>            
-          <table class="table table-hover ">
-            <thead>
-              <tr>
-                 <th scope="col">ID</th>
-                 <th scope="col">Date</th>
-                 <th scope="col">Deadline</th>
-                 <th scope="col">SubjectCode</th>
-                 <th scope="col">Faculty</th>
-                 <th scope="col">Semester</th>
-                 <th scope="col">Assignment</th>
-                 <th scope="col">Remarks</th>
-                 <th scope="col">Teacher</th>
+    <div class="alert alert-success" role="alert"><span><strong>Welcome To Student Area!</strong></span></div>
+    <div class="container text-center">
+         <h2>Notes table</h2>
+  <p>The table showing notes of students.</p>            
+  <table class="table table-hover ">
+    <thead>
+      <tr>
+         <th scope="col">ID</th>
+         <th scope="col">SubjectCode</th>
+         <th scope="col">Faculty</th>
+         <th scope="col">Semester</th>
+         <th scope="col">Notes</th>
+         <th scope="col">Teacher</th>
 
-              </tr>
-            </thead>
-            <tbody>
-           <?php
+      </tr>
+    </thead>
+    <tbody>
+   <?php
+        
+     include "../php/connect.php";
+     $query = "SELECT * FROM notes";
+     $result = mysqli_query($con,$query);
+     if(mysqli_num_rows($result) >0){
+         while($record=mysqli_fetch_assoc($result)){
+             $id=$record['Id'];
+             $subjectcode=$record['SubjectCode'];
+             $faculty=$record['Faculty'];
+             $semester=$record['Semester'];
+             $note=$record['Notes'];
+             $teacher=$record['Teacher'];
+             echo "<tr scope='row'>";
+             echo "<td>$id</td>";
+              echo "<td>$subjectcode</td>";
+              echo "<td>$faculty</td>";
+              echo "<td>$semester</td>";
+             echo "<td><a href='../upload/notesTech/$note'>Download</a></td>";
+             echo "<td>$teacher</td>";
+             echo "</tr>";
+         }
+     
+        
+     }
 
-             include "../php/connect.php";
-             $query = "SELECT * FROM assignmentpublish";
-             $result = mysqli_query($con,$query);
-             if(mysqli_num_rows($result) >0){
-                 while($record=mysqli_fetch_assoc($result)){
-                     $id=$record['id'];
-                     $date=$record['Date'];
-                     $deadline=$record['Deadline'];
-                     $subjectcode=$record['SubjectCode'];
-                     $faculty=$record['Faculty'];
-                     $semester=$record['Semester'];
-                     $assignment=$record['Assignment'];
-                     $remarks=$record['Remarks'];
-                     $teacher=$record['Teacher'];
-                     echo "<tr scope='row'>";
-                     echo "<td>$id</td>";
-                      echo "<td>$date</td>";
-                      echo "<td>$deadline</td>";
-                      echo "<td>$subjectcode</td>";
-                      echo "<td>$faculty</td>";
-                      echo "<td>$semester</td>";
-                     echo "<td><a href='../upload/assignmentreceive/$assignment'>Download</a></td>";
-                     echo "<td>$remarks</td>";
-                     echo "<td>$teacher</td>";
-                     echo "</tr>";
-                 }
-
-
-             }
-
-
+        
            
         ?>
     </tbody>
@@ -139,12 +128,9 @@
                     <p>Get Connected</p>
                 </div>
                 <div></div>
-                <div class="social-links social-icons">
-                    <a href="#" style="background-color: rgb(242,245,247);"><i class="fa fa-facebook" style="color: rgb(130,88,137);"></i></a>
-                    <a href="#" style="background-color: rgb(249,250,251);"><i class="fa fa-twitter" style="color: #825889;"></i></a>
-                    <a href="#" style="background-color: rgb(244,245,247);"><i class="fa fa-linkedin" style="color: #825889;"></i></a>
-                    <a href="#" style="background-color: rgb(249,250,251);"><i class="fa fa-github" style="color: #825889;"></i></a>
-                </div>
+                <div class="social-links social-icons"><a href="#" style="background-color: rgb(242,245,247);"><i class="fa fa-facebook" style="color: rgb(130,88,137);"></i></a><a href="#" style="background-color: rgb(249,250,251);"><i class="fa fa-twitter" style="color: #825889;"></i></a>
+                    <a
+                        href="#" style="background-color: rgb(244,245,247);"><i class="fa fa-linkedin" style="color: #825889;"></i></a><a href="#" style="background-color: rgb(249,250,251);"><i class="fa fa-github" style="color: #825889;"></i></a></div>
             </div>
         </div>
     </footer>

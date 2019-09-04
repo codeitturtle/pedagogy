@@ -40,6 +40,18 @@
     <link rel="stylesheet" href="assets/css/MUSA_no-more-tables.css">
     <link rel="stylesheet" href="assets/css/Service-Box-Style-01.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        
+      img{
+          border-radius: 0;
+          transition-delay: .1s;
+          width: 250px;
+          height: 150px;
+      }
+      img:hover{
+          border-radius: 50%;
+      }
+    </style>
 </head>
 
 <body>
@@ -48,50 +60,55 @@
             <div
                 class="collapse navbar-collapse" id="navcol-1" style="background-color: #825889;padding-left: 20px;">
                 <ul class="nav navbar-nav ml-auto" style="margin-top:13px;">
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="#" uk-scroll="offset:50">Home </a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="#empresa" uk-scroll="offset:100">Notice</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="#areas" uk-scroll="offset:100">notes</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="index.php" uk-scroll="offset:50">Home </a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="notice.php" uk-scroll="offset:100">Notice</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="notes.php" uk-scroll="offset:100">notes</a></li>
                     <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Assignment</a>
-                        <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">First Item</a><a class="dropdown-item" role="presentation" href="#">Second Item</a><a class="dropdown-item" role="presentation" href="#">Third Item</a></div>
+                       <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="su">Assignment Submit</a><a class="dropdown-item" role="presentation" href="#">Assignment Receive</a></div>
                     </li>
-                    <li class="nav-item" role="presentation"><a class="nav-link active" href="#">Event</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="#diferencial" uk-scroll="offset:50">Log Out</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="event.php">Event</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="../index.php" uk-scroll="offset:50">Log Out</a></li>
                 </ul>
         </div>
         </div>
     </nav>
-    <div class="alert alert-success" role="alert"><span><strong>Welcome To Student Area!</strong></span></div>
-    <div class="carousel slide" data-ride="carousel" id="carousel-1">
-        <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active">
-                <div class="jumbotron hero-nature carousel-hero">
-                    <h1 class="hero-title">Hero Nature</h1>
-                    <p class="hero-subtitle">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
-                    <p><a class="btn btn-primary btn-lg hero-button" role="button" href="#">Learn more</a></p>
+    
+    <div class="container">
+        <h1 style="text-align:center">Events</h1>
+       <?php
+
+         include "../php/connect.php";
+         $query = "SELECT * FROM events";
+         $result = mysqli_query($con,$query);
+         if(mysqli_num_rows($result) >0){
+             while($record=mysqli_fetch_assoc($result)){
+                 $subject=$record['Subject'];
+                 $date=$record['Date'];
+                 $file_name=$record['Image'];
+                 $remarks=$record['Remarks'];
+                 $postby=$record['Postby'];
+                ?>
+                <hr>
+                <div class="row">
+                    <div class="col-md-3">
+
+                        <?php echo "<img style='border-radiius:15%;' src='../upload/image/$file_name' width='250' height='150'>" ?>
+                    </div>
+                    <div class="col-md-9">
+                        <?php echo "<h1 style='margin-top:-10px;text-decoration:underline;'>$subject</h1>";
+                            echo "$date";
+                            echo"<p>$remarks </p>";
+                            echo "<h4 style='float:right;color:#444'>Post by:$postby</h4>";
+                        ?>
+
+                    </div>
                 </div>
-            </div>
-            <div class="carousel-item">
-                <div class="jumbotron hero-photography carousel-hero">
-                    <h1 class="hero-title">Hero Photography</h1>
-                    <p class="hero-subtitle">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
-                    <p><a class="btn btn-primary btn-lg hero-button" role="button" href="#">Learn more</a></p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="jumbotron hero-technology carousel-hero">
-                    <h1 class="hero-title">Hero Technology</h1>
-                    <p class="hero-subtitle">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
-                    <p><a class="btn btn-primary btn-lg hero-button" role="button" href="#">Learn more</a></p>
-                </div>
-            </div>
-        </div>
-        <div><a class="carousel-control-prev" href="#carousel-1" role="button" data-slide="prev"><i class="fa fa-chevron-left"></i><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#carousel-1" role="button" data-slide="next"><i class="fa fa-chevron-right"></i><span class="sr-only">Next</span></a></div>
-        <ol
-            class="carousel-indicators">
-            <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-1" data-slide-to="1"></li>
-            <li data-target="#carousel-1" data-slide-to="2"></li>
-            </ol>
+                <?php
+             }
+
+
+         }
+    ?>
     </div>
     <footer style="background-color: #825889;">
         <div class="row">

@@ -2,7 +2,7 @@
     <?php
     if (isset($_POST['btnSubmit'])) {
      $subject=$_POST['txtSubject'];
-    $date=$POST_['txtDate'];
+    $date=$_POST['txtDate'];
     $file_name=$_FILES['file']['name'];
     $file_size=$_FILES['file']['size'];
     $temp_name=$_FILES['file']['tmp_name'];

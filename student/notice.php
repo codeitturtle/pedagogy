@@ -88,28 +88,28 @@
           <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav m-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="index.php">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Programme</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Notes</a>
+                <a class="nav-link" href="notes.php">Notes</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Assignment
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item bg-info text-light p-3 border-bottom" href="#">Assignment Receive</a>
-                  <a class="dropdown-item bg-info text-light p-3 border-top" href="#">Assignment send</a>
+                  <a class="dropdown-item bg-info text-light p-3 border-bottom" href="viewAssignment.php">Assignment Receive</a>
+                  <a class="dropdown-item bg-info text-light p-3 border-top" href="submitAssignment.php">Assignment submit</a>
                 </div>
               </li>
               <li class="nav-item">
-                <a id="active"  class="nav-link" href="#">Notice</a>
+                <a id="active"  class="nav-link" href="notice.php">Notice</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Log out</a>
+                <a class="nav-link" href="../index.php">Log out</a>
               </li>
             </ul>
           </div>
